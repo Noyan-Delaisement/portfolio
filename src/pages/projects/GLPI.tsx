@@ -95,14 +95,9 @@ export default function GLPI() {
           ],
         },
       ]}
-      documents={[
-        'Cahier des charges GLPI',
-        'Planning projet Gantt',
-        'Documentation technique GLPI',
-        'Guide utilisateur tickets',
-      ]}
-      prevProject={{ title: 'Supervision Zabbix & Wazuh', link: '/projets/supervision' }}
-      nextProject={{ title: 'Rudder Gestion de configuration', link: '/projets/rudder' }}
+      documents={[]}
+      prevProject={{ title: 'Supervision Wazuh', link: '/projets/supervision' }}
+      nextProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
     />
   );
 }

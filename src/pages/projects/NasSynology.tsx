@@ -93,14 +93,9 @@ export default function NasSynology() {
           ],
         },
       ]}
-      documents={[
-        'Plan de sauvegarde et stratégie 3-2-1 (schéma de réplication)',
-        'Procédure de restauration NAS Synology',
-        'Scripts de dump MySQL automatisés (Rudder)',
-        'Rapport de tests de restauration',
-      ]}
-      prevProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
-      nextProject={{ title: 'Masterisation & Configuration IHM Windows', link: '/projets/masterisation-ihm' }}
+      documents={[]}
+      prevProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}
+      nextProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
     />
   );
 }

@@ -92,13 +92,15 @@ export default function TableauSynthese() {
         </div>
 
         <a
-          href="/Tableau_Synthese_E5.xlsx"
+          href="/Tableau_Synthese_E5.pdf"
           download
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#00d4a0] hover:bg-[#00e6b4] text-gray-900 font-medium rounded-lg transition-colors"
         >
           <Download size={20} />
           Télécharger le tableau .xlsx
         </a>
+
+        
 
         <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
           <h2 className="text-lg font-semibold text-white mb-4">Légende des compétences</h2>

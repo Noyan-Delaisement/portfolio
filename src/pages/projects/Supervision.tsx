@@ -10,13 +10,12 @@ export default function Supervision() {
           <p className="text-2xl font-bold text-white">3</p>
         </div>
         <div>
-          <p className="text-gray-400">Services supervisés</p>
-          <p className="text-2xl font-bold text-white">20+</p>
+          <p className="text-gray-400">Agents déployés</p>
+          <p className="text-2xl font-bold text-white">3</p>
         </div>
         <div>
           <p className="text-gray-400">Technologies</p>
           <p className="text-white font-medium">SIEM Wazuh actif</p>
-          <p className="text-white font-medium">Intégration Rudder-Zabbix</p>
         </div>
       </div>
     </div>
@@ -25,40 +24,32 @@ export default function Supervision() {
   return (
     <ProjectLayout
       label="Supervision & Sécurité"
-      title="Supervision Zabbix & Wazuh"
+      title="Supervision Wazuh"
       period="2024/2025"
-      context="PREM Automation"
-      role="Technicien apprenti"
+      context="Ecole"
+      role="Etudiant apprenti"
       competencies={['C1', 'C2', 'C5']}
       headerColor="bg-gradient-to-r from-orange-900/50 to-red-900/50"
       infoBox={infoBox}
-      contextText="Infrastructure PREM Automation (3 serveurs, 20+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Incidents passaient inaperçus, aucune détection sécurité. Objectif : monitoring complet + SIEM."
+      contextText="Infrastructure Ecolé(CFAI Beauzelle) (4 serveurs, 10+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Incidents passaient inaperçus, aucune détection sécurité. Objectif : SIEM et détection des menaces."
       actions={[
-        'Installation et configuration Zabbix pour monitoring temps réel : CPU, RAM, disques, services réseau',
-        'Création templates de supervision adaptés à chaque type de serveur (Windows, Linux, Docker)',
-        'Mise en place alertes automatiques par email en cas de seuil dépassé',
         'Déploiement Wazuh (SIEM) pour collecte et analyse logs de sécurité',
-        'Intégration Rudder-Zabbix pour corréler conformité configuration et supervision',
         'Résolution incidents de compliance détectés lors mise en place',
         'Documentation tableaux de bord, alertes et procédures d\'escalade',
       ]}
       results={[
-        'Visibilité totale sur infrastructure en temps réel',
         'Détection proactive incidents',
         'Détection automatique menaces via Wazuh',
         'Mises à jour sécurisées via Rudder',
       ]}
       techStack={[
-        'Zabbix',
         'Wazuh SIEM',
-        'Rudder',
+        'Ruddder',
         'Docker',
         'Debian Linux',
         'Windows Server',
-        'Vaultwarden',
-        'Nextcloud',
-        'SNMP',
         'Bash',
+        'yaml',
       ]}
       competencyDetails={[
         {
@@ -85,11 +76,9 @@ export default function Supervision() {
         },
       ]}
       documents={[
-        'Documentation Zabbix templates et alertes',
         'Documentation Wazuh règles SIEM',
-        'Procédure d\'escalade des incidents',
       ]}
-      prevProject={{ title: 'Active Directory & GPO', link: '/projets/active-directory' }}
+      prevProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
       nextProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}
     />
   );

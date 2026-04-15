@@ -52,11 +52,7 @@ export default function Infrastructure() {
           ],
         },
       ]}
-      documents={[
-        'Schéma d\'architecture réseau',
-        'Documentation technique pfSense',
-        'Procédure de maintenance réseau',
-      ]}
+      documents={[]}
       nextProject={{ title: 'Active Directory & GPO', link: '/projets/active-directory' }}
     />
   );

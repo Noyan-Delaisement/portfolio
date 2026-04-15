@@ -93,14 +93,10 @@ export default function MasterisationIHM() {
           ],
         },
       ]}
-      documents={[
-        'Procédure de masterisation et déploiement Windows',
-        'Fiche de recette intégration IHM ↔ automate',
-        'Configuration réseau industriel (plan d\'adressage OT)',
-        'Guide prise en main utilisateur IHM',
-      ]}
-      prevProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
-      nextProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
+
+      documents={[]}
+      prevProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
+      nextProject={{ title: 'BookStack — Wiki d\'infrastructure', link: '/projets/bookstack' }}
     />
   );
 }
