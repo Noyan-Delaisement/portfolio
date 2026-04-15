@@ -76,7 +76,7 @@ export default function Supervision() {
         },
       ]}
       documents={[
-        'Documentation Wazuh règles SIEM',
+        { title: 'Documentation Wazuh SIEM', link: '/wazuh.pdf' },
       ]}
       prevProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
       nextProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}
