@@ -78,8 +78,8 @@ export default function Rudder() {
         'Rapport conformité avant/après',
         'Procédure maintenance agents Rudder',
       ]}
-      prevProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}
-      nextProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
+      prevProject={{ title: 'Active Directory & GPO', link: '/projets/active-directory' }}
+      nextProject={{ title: 'Supervision Wazuh', link: '/projets/supervision' }}
     />
   );
 }

@@ -11,36 +11,91 @@ export default function TableauSynthese() {
     { code: 'C6', label: 'Organiser son développement professionnel' },
   ];
 
-  const realisations = [
+  const sections = [
     {
-      title: 'Infrastructure réseau sécurisée (pfSense, IDS/IPS, VLANs)',
-      period: 'Sept. 2024 – Fév. 2025',
-      competencies: { C1: true, C2: false, C3: false, C4: false, C5: true, C6: false },
+      label: 'Réalisation en cours de formation',
+      items: [
+        {
+          title: 'SIEM Wazuh — 10 agents Debian/Windows, FIM, SCA, règles CVE, authentification LDAP/AD',
+          period: '01/10/25 – 30/04/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: true, C6: false },
+        },
+        {
+          title: 'Portfolio professionnel (React, TypeScript, Vite, Tailwind — hébergement LXC, Cloudflare Tunnel)',
+          period: '01/01/26 – 30/04/26',
+          competencies: { C1: false, C2: false, C3: true, C4: true, C5: false, C6: true },
+        },
+        {
+          title: 'Déploiement automatisé de postes Windows avec MDT (WDS + ADK/WinPE, PXE, Windows Server 2022)',
+          period: '01/11/25 – 15/01/26',
+          competencies: { C1: true, C2: true, C3: false, C4: true, C5: true, C6: false },
+        },
+        {
+          title: 'BookStack — Déploiement Docker Compose, authentification LDAP/AD, reverse proxy HTTPS Nginx',
+          period: '15/02/26 – 30/03/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: true, C6: false },
+        },
+        {
+          title: 'Scripting (Bash / PowerShell / YAML) — automatisation infra, sauvegardes, agents Wazuh',
+          period: '01/09/24 – 30/06/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: true, C6: false },
+        },
+        {
+          title: 'Supervision Zabbix — monitoring temps réel CPU/RAM/services sur 3 serveurs, intégration LDAP/AD',
+          period: '01/02/26 – 15/03/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: true, C6: false },
+        },
+        {
+          title: 'Rudder — Gestion de configuration centralisée, standardisation 3 serveurs, compliance',
+          period: '01/10/25 – 30/06/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: false, C6: false },
+        },
+      ],
     },
     {
-      title: 'Active Directory & GPO (Windows Server, OU, GPO)',
-      period: 'Oct. 2024 – Mars 2025',
-      competencies: { C1: true, C2: false, C3: false, C4: false, C5: true, C6: false },
+      label: 'Réalisations en milieu professionnel — Première année',
+      items: [
+        {
+          title: 'Infrastructure réseau sécurisée — PREM Automation (pfSense, IDS/IPS Suricata, VLANs 802.1Q)',
+          period: '01/09/24 – 30/11/24',
+          competencies: { C1: true, C2: false, C3: false, C4: false, C5: true, C6: false },
+        },
+        {
+          title: 'Active Directory & GPO — PREM Automation (Windows Server, OU, stratégies de groupe)',
+          period: '01/10/24 – 31/01/25',
+          competencies: { C1: true, C2: false, C3: false, C4: false, C5: true, C6: false },
+        },
+        {
+          title: 'GLPI Ticketing N1/N2/N3 — PREM Automation (support IT hiérarchique, workflows escalade)',
+          period: '01/11/24 – 31/03/25',
+          competencies: { C1: false, C2: true, C3: false, C4: true, C5: true, C6: false },
+        },
+      ],
     },
     {
-      title: 'Supervision Zabbix & Wazuh (monitoring, SIEM, Rudder-Zabbix)',
-      period: 'Nov. 2024 – Juin 2025',
-      competencies: { C1: true, C2: true, C3: false, C4: false, C5: true, C6: false },
-    },
-    {
-      title: 'GLPI Ticketing N1/N2/N3 (support IT hiérarchique)',
-      period: 'Janv. 2025 – Avril 2025',
-      competencies: { C1: false, C2: true, C3: false, C4: true, C5: true, C6: false },
-    },
-    {
-      title: 'Rudder gestion de configuration (3 serveurs, compliance)',
-      period: 'Déc. 2024 – Juin 2025',
-      competencies: { C1: true, C2: true, C3: false, C4: false, C5: false, C6: false },
-    },
-    {
-      title: 'Portfolio professionnel (React, Vite, Tailwind, DNS, hébergement)',
-      period: 'Sept. 2025 – Mars 2026',
-      competencies: { C1: false, C2: false, C3: true, C4: true, C5: false, C6: true },
+      label: 'Réalisations en milieu professionnel — Deuxième année',
+      items: [
+        {
+          title: 'Configuration des IHM Windows — PREM Automation (paramétrage postes IHM, réseau industriel, tests)',
+          period: '01/09/25 – 30/06/26',
+          competencies: { C1: true, C2: true, C3: false, C4: true, C5: true, C6: false },
+        },
+        {
+          title: 'Stratégie de sauvegarde — PREM Automation (3 NAS Synology, Hyper Backup, tests de restauration)',
+          period: '01/09/25 – 30/06/26',
+          competencies: { C1: true, C2: true, C3: false, C4: true, C5: true, C6: false },
+        },
+        {
+          title: 'Automatisation des dumps MySQL vers NAS Synology avec CRON',
+          period: '10/03/26 – 20/03/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: false, C6: false },
+        },
+        {
+          title: 'Analyse de trame avec Arkime et ntopng — configuration switch SPAN (port mirroring)',
+          period: '01/03/26 – 31/03/26',
+          competencies: { C1: true, C2: true, C3: false, C4: false, C5: false, C6: false },
+        },
+      ],
     },
   ];
 
@@ -63,7 +118,7 @@ export default function TableauSynthese() {
             </div>
             <div>
               <span className="text-gray-400">N° candidat</span>
-              <p className="text-white font-medium">À compléter avant l'examen</p>
+              <p className="text-white font-medium">02147230919</p>
             </div>
             <div>
               <span className="text-gray-400">Centre de formation</span>
@@ -92,13 +147,15 @@ export default function TableauSynthese() {
         </div>
 
         <a
-          href="/Tableau_Synthese_E5.xlsx"
+          href="/Tableau_Synthese_E5.pdf"
           download
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#00d4a0] hover:bg-[#00e6b4] text-gray-900 font-medium rounded-lg transition-colors"
         >
           <Download size={20} />
-          Télécharger le tableau .xlsx
+          Télécharger le tableau .pdf
         </a>
+
+        
 
         <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
           <h2 className="text-lg font-semibold text-white mb-4">Légende des compétences</h2>
@@ -128,30 +185,24 @@ export default function TableauSynthese() {
                 </tr>
               </thead>
               <tbody>
-                {realisations.map((real, index) => (
-                  <tr key={index} className="border-b border-gray-800 hover:bg-[#0d1117]/50">
-                    <td className="px-4 py-4 text-gray-300">{real.title}</td>
-                    <td className="px-4 py-4 text-gray-400 whitespace-nowrap">{real.period}</td>
-                    <td className="px-4 py-4 text-center">
-                      {real.competencies.C1 && <span className="text-[#00d4a0] text-lg">✓</span>}
+                {sections.flatMap((section, sIdx) => [
+                  <tr key={`s-${sIdx}`} className="bg-[#0d1117]">
+                    <td colSpan={8} className="px-4 py-2 text-xs font-semibold text-[#4f8eff] uppercase tracking-wider border-b border-t border-gray-700">
+                      {section.label}
                     </td>
-                    <td className="px-4 py-4 text-center">
-                      {real.competencies.C2 && <span className="text-[#00d4a0] text-lg">✓</span>}
-                    </td>
-                    <td className="px-4 py-4 text-center">
-                      {real.competencies.C3 && <span className="text-[#00d4a0] text-lg">✓</span>}
-                    </td>
-                    <td className="px-4 py-4 text-center">
-                      {real.competencies.C4 && <span className="text-[#00d4a0] text-lg">✓</span>}
-                    </td>
-                    <td className="px-4 py-4 text-center">
-                      {real.competencies.C5 && <span className="text-[#00d4a0] text-lg">✓</span>}
-                    </td>
-                    <td className="px-4 py-4 text-center">
-                      {real.competencies.C6 && <span className="text-[#00d4a0] text-lg">✓</span>}
-                    </td>
-                  </tr>
-                ))}
+                  </tr>,
+                  ...section.items.map((real, idx) => (
+                    <tr key={`${sIdx}-${idx}`} className="border-b border-gray-800 hover:bg-[#0d1117]/50">
+                      <td className="px-4 py-4 text-gray-300 text-sm">{real.title}</td>
+                      <td className="px-4 py-4 text-gray-400 whitespace-nowrap text-sm">{real.period}</td>
+                      {(['C1','C2','C3','C4','C5','C6'] as const).map(c => (
+                        <td key={c} className="px-4 py-4 text-center">
+                          {real.competencies[c] && <span className="text-[#00d4a0] text-lg">✓</span>}
+                        </td>
+                      ))}
+                    </tr>
+                  )),
+                ])}
               </tbody>
             </table>
           </div>

@@ -91,8 +91,8 @@ export default function AnalyseTrafic() {
         'Rapport d\'analyse des flux réseau identifiés',
         'Captures PCAP et sessions analysées',
       ]}
-      prevProject={{ title: 'Masterisation & Configuration IHM Windows', link: '/projets/masterisation-ihm' }}
-      nextProject={{ title: 'Portfolio professionnel', link: '/projets/portfolio' }}
+      prevProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
+      nextProject={{ title: 'Masterisation & Configuration IHM Windows', link: '/projets/masterisation-ihm' }}
     />
   );
 }

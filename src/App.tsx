@@ -13,6 +13,7 @@ import Portfolio from './pages/projects/Portfolio';
 import NasSynology from './pages/projects/NasSynology';
 import MasterisationIHM from './pages/projects/MasterisationIHM';
 import AnalyseTrafic from './pages/projects/AnalyseTrafic';
+import BookStack from './pages/projects/BookStack';
 import Veille from './pages/Veille';
 import TableauSynthese from './pages/TableauSynthese';
 import Contact from './pages/Contact';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/projets/nas-synology" element={<NasSynology />} />
           <Route path="/projets/masterisation-ihm" element={<MasterisationIHM />} />
           <Route path="/projets/analyse-trafic" element={<AnalyseTrafic />} />
+          <Route path="/projets/bookstack" element={<BookStack />} />
           <Route path="/projets/portfolio" element={<Portfolio />} />
           <Route path="/veille" element={<Veille />} />
           <Route path="/tableau-synthese" element={<TableauSynthese />} />

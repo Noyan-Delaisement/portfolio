@@ -143,23 +143,25 @@ export default function ProjectLayout({
           </div>
         </section>
 
-        <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
-          <h2 className="text-2xl font-semibold text-white mb-4">Documents et productions</h2>
-          <ul className="space-y-2">
-            {documents.map((doc, index) => (
-              <li key={index} className="text-gray-300 flex items-start">
-                <span className="text-[#4f8eff] mr-2">📄</span>
-                {typeof doc === 'object' && doc.link ? (
-                  <a href={doc.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#4f8eff] transition-colors hover:underline">
-                    {doc.title}
-                  </a>
-                ) : (
-                  <span>{typeof doc === 'object' ? doc.title : doc}</span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {documents.length > 0 && (
+          <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-white mb-4">Documents et productions</h2>
+            <ul className="space-y-2">
+              {documents.map((doc, index) => (
+                <li key={index} className="text-gray-300 flex items-start">
+                  <span className="text-[#4f8eff] mr-2">📄</span>
+                  {typeof doc === 'object' && doc.link ? (
+                    <a href={doc.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#4f8eff] transition-colors hover:underline">
+                      {doc.title}
+                    </a>
+                  ) : (
+                    <span>{typeof doc === 'object' ? doc.title : doc}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-800">
           {prevProject ? (

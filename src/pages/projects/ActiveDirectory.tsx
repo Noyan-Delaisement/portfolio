@@ -58,7 +58,7 @@ export default function ActiveDirectory() {
         'Procédure de jonction au domaine',
       ]}
       prevProject={{ title: 'Infrastructure réseau sécurisée', link: '/projets/infrastructure' }}
-      nextProject={{ title: 'Supervision Zabbix & Wazuh', link: '/projets/supervision' }}
+      nextProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
     />
   );
 }

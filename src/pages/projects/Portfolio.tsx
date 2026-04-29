@@ -66,7 +66,7 @@ export default function Portfolio() {
         { title: 'ndfolio.dlsmnt.fr — ce site', link: 'https://ndfolio.dlsmnt.fr' },
         'Documentation technique hébergement et DNS',
       ]}
-      prevProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
+      prevProject={{ title: 'BookStack — Wiki d\'infrastructure', link: '/projets/bookstack' }}
     />
   );
 }

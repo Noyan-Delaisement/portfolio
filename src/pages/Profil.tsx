@@ -42,7 +42,7 @@ export default function Profil() {
           </h1>
           <div className="h-1 w-24 bg-[#4f8eff] rounded"></div>
           <a
-            href="/DELAISEMENT_Noyan_CV.pdf"
+            href="/Delaisement%20Noyan.pdf"
             download
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#4f8eff] hover:bg-[#6ea8ff] text-white font-medium rounded-lg transition-colors text-sm"
           >

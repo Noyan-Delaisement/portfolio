@@ -1,4 +1,4 @@
-import { Rss, Shield, Bug, Newspaper, Github, Youtube, Linkedin, Globe } from 'lucide-react';
+import { Rss, Shield, Bug, Newspaper, Github, Youtube, Linkedin, Globe, Activity, Eye, Settings } from 'lucide-react';
 
 export default function Veille() {
   const sources = [
@@ -27,16 +27,37 @@ export default function Veille() {
       url: 'https://github.com/trending',
     },
     {
-      icon: Rss,
-      name: 'Blogs officiels Zabbix / Rudder',
-      description: 'Nouvelles versions et fonctionnalités des outils utilisés en entreprise',
-      url: 'https://blog.zabbix.com',
-    },
-    {
       icon: Youtube,
       name: 'YouTube / Docs officielles',
       description: 'Tutoriels techniques, documentation officielle Linux Debian pfSense',
       url: 'https://www.youtube.com/@LearnLinuxTV',
+    },
+  ];
+
+  const toolBlogs = [
+    {
+      icon: Activity,
+      name: 'Zabbix Blog',
+      description: 'Nouvelles versions, templates et bonnes pratiques monitoring',
+      url: 'https://blog.zabbix.com',
+      accent: 'border-l-orange-500',
+      iconColor: 'text-orange-400',
+    },
+    {
+      icon: Eye,
+      name: 'Wazuh Blog',
+      description: 'Actualités SIEM/XDR, règles de détection et cas d\'usage sécurité',
+      url: 'https://wazuh.com/blog',
+      accent: 'border-l-[#4f8eff]',
+      iconColor: 'text-[#4f8eff]',
+    },
+    {
+      icon: Settings,
+      name: 'Rudder Blog',
+      description: 'Mises à jour gestion de configuration, compliance et nouvelles politiques',
+      url: 'https://www.rudder.io/blog',
+      accent: 'border-l-[#00d4a0]',
+      iconColor: 'text-[#00d4a0]',
     },
   ];
 
@@ -115,6 +136,32 @@ export default function Veille() {
                   {source.url !== '#' && (
                     <p className="text-xs text-[#4f8eff] mt-2">{source.url.replace('https://', '')}</p>
                   )}
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-white mb-2">Blogs des outils utilisés</h2>
+          <p className="text-sm text-gray-400 mb-6">Suivi des mises à jour des outils déployés en production</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {toolBlogs.map((tool, index) => {
+              const Icon = tool.icon;
+              return (
+                <a
+                  key={index}
+                  href={tool.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`bg-[#0d1117] border border-gray-800 border-l-4 ${tool.accent} rounded-lg p-4 flex items-start gap-4 hover:bg-[#161b22] transition-all group`}
+                >
+                  <Icon size={22} className={`${tool.iconColor} flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform`} />
+                  <div>
+                    <h3 className="text-white font-semibold text-sm">{tool.name}</h3>
+                    <p className="text-xs text-gray-400 mt-1 leading-relaxed">{tool.description}</p>
+                    <p className="text-xs text-gray-600 mt-2">{tool.url.replace('https://', '')}</p>
+                  </div>
                 </a>
               );
             })}

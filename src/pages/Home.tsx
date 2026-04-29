@@ -17,7 +17,7 @@ export default function Home() {
       items: [
         'Infrastructure réseau',
         'Active Directory',
-        'Supervision Zabbix/Wazuh',
+        'Supervision Wazuh',
         'GLPI Ticketing',
         'Rudder',
         'Portfolio web',
