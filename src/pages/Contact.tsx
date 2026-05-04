@@ -41,8 +41,8 @@ export default function Contact() {
     {
       icon: Github,
       title: 'GitHub',
-      value: 'AnthraX-J',
-      link: 'https://github.com/AnthraX-J',
+      value: 'Noyan-Delaisement',
+      link: 'https://github.com/Noyan-Delaisement',
     },
   ];
 

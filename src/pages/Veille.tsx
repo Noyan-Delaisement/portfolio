@@ -71,8 +71,8 @@ export default function Veille() {
     {
       icon: Github,
       name: 'GitHub',
-      handle: 'AnthraX-J',
-      url: 'https://github.com/AnthraX-J',
+      handle: 'Noyan-Delaisement',
+      url: 'https://github.com/Noyan-Delaisement',
     },
     {
       icon: Globe,

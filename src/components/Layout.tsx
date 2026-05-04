@@ -52,7 +52,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="https://github.com/AnthraX-J"
+                  href="https://github.com/Noyan-Delaisement"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#4f8eff] transition-colors"
@@ -100,7 +100,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="https://github.com/AnthraX-J"
+                  href="https://github.com/Noyan-Delaisement"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#4f8eff] transition-colors"
