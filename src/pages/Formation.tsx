@@ -7,7 +7,7 @@ export default function Formation() {
     period: '2024 — présent',
     location: 'Toulouse, France',
     missions: [
-      'Administration infrastructure 3 serveurs / 20+ services',
+      'Administration infrastructure 2 serveurs / 10+ services',
       'Déploiement pfSense + IDS/IPS',
       'Configuration Active Directory + GPO',
       'Mise en place supervision Zabbix + Wazuh',
