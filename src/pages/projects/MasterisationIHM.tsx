@@ -94,7 +94,9 @@ export default function MasterisationIHM() {
         },
       ]}
 
-      documents={[]}
+      documents={[
+        { title: 'Documentation technique Masterisation IHM', link: '/Masterisation_IHM.pdf' },
+      ]}
       prevProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
       nextProject={{ title: 'BookStack — Wiki d\'infrastructure', link: '/projets/bookstack' }}
     />
