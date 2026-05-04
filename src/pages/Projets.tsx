@@ -42,7 +42,7 @@ export default function Projets() {
       title: 'Supervision Wazuh',
       description: 'SIEM Wazuh, collecte et analyse logs sécurité, détection des menaces, intégration Active Directory',
       competencies: ['C1', 'C2', 'C5'],
-      period: 'Infrastructure scolaire 2024/2025',
+      period: 'Infrastructure scolaire 2025/2026',
       link: '/projets/supervision',
     },
     {

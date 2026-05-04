@@ -16,7 +16,7 @@ export default function Portfolio() {
         'Achat et configuration nom de domaine dlsmnt.fr, sous-domaine ndfolio.dlsmnt.fr',
         'Mise en place hébergement web et configuration DNS',
         'Conception architecture du site : routing React Router, composants réutilisables (Layout, ProjectLayout, CompetencyBadge)',
-        'Création pages : Profil, Formation, Projets (6 fiches détaillées), Tableau de synthèse E5, Veille, Contact',
+        'Création pages : Profil, Formation, Projets (10 fiches détaillées), Tableau de synthèse E5, Veille, Contact',
         'Build et déploiement via Vite en site statique',
         'Gestion identité professionnelle en ligne : LinkedIn, GitHub, portfolio',
       ]}

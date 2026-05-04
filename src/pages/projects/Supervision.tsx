@@ -7,11 +7,12 @@ export default function Supervision() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
         <div>
           <p className="text-gray-400">Serveurs</p>
-          <p className="text-2xl font-bold text-white">3</p>
+          <p className="text-2xl font-bold text-white">4</p>
         </div>
         <div>
           <p className="text-gray-400">Agents déployés</p>
-          <p className="text-2xl font-bold text-white">3</p>
+          <p className="text-2xl font-bold text-white">10</p>
+          <p className="text-gray-400 text-xs">Debian / Windows</p>
         </div>
         <div>
           <p className="text-gray-400">Technologies</p>
@@ -26,12 +27,12 @@ export default function Supervision() {
       label="Supervision & Sécurité"
       title="Supervision Wazuh"
       period="2024/2025"
-      context="Ecole"
-      role="Etudiant apprenti"
+      context="CFAI Beauzelle"
+      role="Étudiant apprenti"
       competencies={['C1', 'C2', 'C5']}
       headerColor="bg-gradient-to-r from-orange-900/50 to-red-900/50"
       infoBox={infoBox}
-      contextText="Infrastructure Ecolé(CFAI Beauzelle) (4 serveurs, 10+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Incidents passaient inaperçus, aucune détection sécurité. Objectif : SIEM et détection des menaces."
+      contextText="Infrastructure scolaire — CFAI Beauzelle (4 serveurs, 10+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Les incidents passaient inaperçus, aucune détection sécurité en place. Objectif : déployer un SIEM pour la collecte de logs et la détection des menaces."
       actions={[
         'Déploiement Wazuh (SIEM) pour collecte et analyse logs de sécurité',
         'Résolution incidents de compliance détectés lors mise en place',
@@ -39,12 +40,11 @@ export default function Supervision() {
       ]}
       results={[
         'Détection proactive incidents',
-        'Détection automatique menaces via Wazuh',
-        'Mises à jour sécurisées via Rudder',
+        'Détection automatique des menaces via Wazuh',
       ]}
       techStack={[
         'Wazuh SIEM',
-        'Ruddder',
+        'Rudder',
         'Docker',
         'Debian Linux',
         'Windows Server',
