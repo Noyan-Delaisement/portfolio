@@ -1,4 +1,13 @@
+import { useState, useEffect } from 'react';
 import { Rss, Shield, Bug, Newspaper, Github, Youtube, Linkedin, Globe, Activity, Eye, Settings } from 'lucide-react';
+
+type RssItem = { title: string; link: string; pubDate: string; description: string } | null;
+
+const rssFeeds = [
+  { name: 'ANSSI', feedUrl: 'https://www.cert.ssi.gouv.fr/feed/', color: 'text-[#4f8eff]', bg: 'bg-[#4f8eff]/20', border: 'border-[#4f8eff]/30', hoverBorder: 'hover:border-[#4f8eff]/50' },
+  { name: 'The Hacker News', feedUrl: 'https://feeds.feedburner.com/TheHackersNews', color: 'text-[#00d4a0]', bg: 'bg-[#00d4a0]/20', border: 'border-[#00d4a0]/30', hoverBorder: 'hover:border-[#00d4a0]/50' },
+  { name: 'IT-Connect', feedUrl: 'https://www.it-connect.fr/feed/', color: 'text-purple-400', bg: 'bg-purple-500/20', border: 'border-purple-500/30', hoverBorder: 'hover:border-purple-500/50' },
+];
 
 export default function Veille() {
   const sources = [
@@ -101,6 +110,37 @@ export default function Veille() {
     },
   ];
 
+  const [feedItems, setFeedItems] = useState<Record<string, RssItem>>({});
+  const [loadingRss, setLoadingRss] = useState(true);
+
+  useEffect(() => {
+    const stripHtml = (html: string) =>
+      html.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, ' ').replace(/\s+/g, ' ').trim();
+    const formatDate = (d: string) => {
+      try { return new Date(d).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }); }
+      catch { return ''; }
+    };
+    Promise.all(
+      rssFeeds.map(async (feed) => {
+        try {
+          const res = await fetch(
+            `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.feedUrl)}&count=1`
+          );
+          const data = await res.json();
+          if (data.status === 'ok' && data.items?.length > 0) {
+            const item = data.items[0];
+            const desc = stripHtml(item.description || item.content || '');
+            return [feed.name, { title: item.title, link: item.link, pubDate: formatDate(item.pubDate), description: desc.slice(0, 280) + (desc.length > 280 ? '…' : '') }];
+          }
+        } catch { /* ignore */ }
+        return [feed.name, null];
+      })
+    ).then((results) => {
+      setFeedItems(Object.fromEntries(results));
+      setLoadingRss(false);
+    });
+  }, []);
+
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-16">
@@ -169,43 +209,50 @@ export default function Veille() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-white mb-6">Articles de veille commentés</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#161b22] border border-gray-800 rounded-lg p-6 space-y-3 hover:border-[#4f8eff]/50 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-medium px-2 py-1 bg-[#4f8eff]/20 text-[#4f8eff] rounded border border-[#4f8eff]/30">ANSSI</span>
-                <span className="text-xs text-gray-500">Mars 2026</span>
-              </div>
-              <h3 className="text-white font-semibold leading-snug">Panorama de la cybermenace 2025 — Les PME en première ligne</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                L'ANSSI publie son bilan annuel : 128 attaques ransomware majeures traitées en 2025, dont 48 % visaient des PME, TPE et ETI. Les équipements de bordure (pare-feu, VPN) restent la principale porte d'entrée, avec 29 % des vulnérabilités exploitées le jour même de leur divulgation. Ce rapport illustre directement mon travail chez PREM Automation : la mise en place de pfSense avec IDS/IPS Suricata et Wazuh SIEM répond précisément à ces menaces ciblant les petites structures industrielles.
-              </p>
-              <a href="https://cyber.gouv.fr/nous-connaitre/publications/panoramas-de-la-cybermenace/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#4f8eff] hover:underline">cyber.gouv.fr →</a>
-            </div>
-
-            <div className="bg-[#161b22] border border-gray-800 rounded-lg p-6 space-y-3 hover:border-[#4f8eff]/50 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-medium px-2 py-1 bg-[#00d4a0]/20 text-[#00d4a0] rounded border border-[#00d4a0]/30">IT-Connect</span>
-                <span className="text-xs text-gray-500">Mai 2025</span>
-              </div>
-              <h3 className="text-white font-semibold leading-snug">BadSuccessor — Faille critique dans Active Directory sous Windows Server 2025</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Des chercheurs d'Akamai ont découvert une vulnérabilité critique liée aux nouveaux comptes dMSA de Windows Server 2025. Baptisée "BadSuccessor", elle permettrait à un attaquant disposant de permissions limitées de compromettre n'importe quel compte du domaine, ouvrant la voie à une prise de contrôle totale. 91 % des environnements testés seraient vulnérables. Cet article m'a conduit à auditer les permissions sur notre Active Directory chez PREM Automation et à vérifier la configuration de nos GPO de sécurité.
-              </p>
-              <a href="https://www.it-connect.fr/windows-server-2025-compte-dmsa-cette-faille-critique-menace-lactive-directory/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#4f8eff] hover:underline">it-connect.fr →</a>
-            </div>
-
-            <div className="bg-[#161b22] border border-gray-800 rounded-lg p-6 space-y-3 hover:border-[#4f8eff]/50 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-medium px-2 py-1 bg-purple-500/20 text-purple-400 rounded border border-purple-500/30">IT-Connect</span>
-                <span className="text-xs text-gray-500">Avril 2025</span>
-              </div>
-              <h3 className="text-white font-semibold leading-snug">Déployer Wazuh XDR/SIEM avec Docker pour un lab cybersécurité</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Cet article détaille le déploiement de Wazuh via Docker Compose, en couvrant les différences entre antivirus, EDR et XDR, ainsi que l'ajout d'agents Windows et Linux. Il illustre une approche que j'ai utilisée chez PREM Automation pour déployer et tester Wazuh sur notre infrastructure Proxmox. La containerisation simplifie la gestion et les mises à jour de la stack Wazuh, ce qui correspond directement à notre usage de Docker sur les serveurs de l'entreprise.
-              </p>
-              <a href="https://www.it-connect.fr/xdr-deploiement-de-wazuh-pour-creer-un-lab-cybersecurite/" target="_blank" rel="noopener noreferrer" className="text-xs text-[#4f8eff] hover:underline">it-connect.fr →</a>
-            </div>
+          <h2 className="text-2xl font-semibold text-white mb-2">Flux RSS — Derniers articles</h2>
+          <p className="text-sm text-gray-400 mb-6">Contenu chargé en temps réel depuis les flux officiels</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {rssFeeds.map((feed) => {
+              const item = feedItems[feed.name];
+              return (
+                <div
+                  key={feed.name}
+                  className={`bg-[#161b22] border border-gray-800 rounded-lg p-6 space-y-3 ${feed.hoverBorder} transition-colors`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className={`text-xs font-medium px-2 py-1 ${feed.bg} ${feed.color} rounded border ${feed.border}`}>
+                      {feed.name}
+                    </span>
+                    {!loadingRss && item && (
+                      <span className="text-xs text-gray-500">{item.pubDate}</span>
+                    )}
+                  </div>
+                  {loadingRss ? (
+                    <div className="space-y-2 animate-pulse">
+                      <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+                      <div className="h-3 bg-gray-800 rounded w-full"></div>
+                      <div className="h-3 bg-gray-800 rounded w-5/6"></div>
+                      <div className="h-3 bg-gray-800 rounded w-2/3"></div>
+                    </div>
+                  ) : item ? (
+                    <>
+                      <h3 className="text-white font-semibold leading-snug">{item.title}</h3>
+                      <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-xs ${feed.color} hover:underline inline-block`}
+                      >
+                        Lire l'article →
+                      </a>
+                    </>
+                  ) : (
+                    <p className="text-sm text-gray-500 italic">Flux indisponible</p>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </section>
 
