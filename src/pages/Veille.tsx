@@ -124,7 +124,7 @@ export default function Veille() {
       rssFeeds.map(async (feed) => {
         try {
           const res = await fetch(
-            `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.feedUrl)}&count=1`
+            `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.feedUrl)}`
           );
           const data = await res.json();
           if (data.status === 'ok' && data.items?.length > 0) {
