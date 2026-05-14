@@ -74,7 +74,7 @@ export default function Projets() {
       title: 'ntopng — Monitoring de trafic réseau',
       description: 'Déploiement ntopng Community Edition, port SPAN, analyse DPI 500+ protocoles, dashboard temps réel',
       competencies: ['C1', 'C2', 'C5'],
-      period: 'Infrastructure scolaire 2024/2025',
+      period: 'PREM Automation 2024/2025',
       link: '/projets/ntopng',
     },
     {
