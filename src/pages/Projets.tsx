@@ -70,6 +70,14 @@ export default function Projets() {
       link: '/projets/analyse-trafic',
     },
     {
+      emoji: '📊',
+      title: 'ntopng — Monitoring de trafic réseau',
+      description: 'Déploiement ntopng Community Edition, port SPAN, analyse DPI 500+ protocoles, dashboard temps réel',
+      competencies: ['C1', 'C2', 'C5'],
+      period: 'Infrastructure scolaire 2024/2025',
+      link: '/projets/ntopng',
+    },
+    {
       emoji: '🏭',
       title: 'Masterisation & Configuration IHM Windows',
       description: 'Masterisation des postes Windows, déploiement et paramétrage des interfaces IHM pour automates industriels, configuration réseau industriel, tests d\'intégration',

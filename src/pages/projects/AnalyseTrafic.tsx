@@ -92,7 +92,7 @@ export default function AnalyseTrafic() {
         'Captures PCAP et sessions analysées',
       ]}
       prevProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
-      nextProject={{ title: 'Masterisation & Configuration IHM Windows', link: '/projets/masterisation-ihm' }}
+      nextProject={{ title: 'ntopng — Monitoring de trafic réseau', link: '/projets/ntopng' }}
     />
   );
 }
