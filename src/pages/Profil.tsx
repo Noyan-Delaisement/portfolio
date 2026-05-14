@@ -2,13 +2,14 @@ import { User, Zap, Target, Lightbulb, Users, TrendingUp, Download } from 'lucid
 
 export default function Profil() {
   const technicalSkills = [
-    { category: 'Systèmes', skills: 'Windows Server 2019/2022, Active Directory, GPO, Debian Linux, Rocky Linux' },
-    { category: 'Réseaux', skills: 'VLAN 802.1Q, pfSense, Fortinet, Cisco, routage, DHCP, DNS, VPN, IDS/IPS Suricata' },
-    { category: 'Supervision', skills: 'Zabbix, Wazuh (SIEM/XDR), Rudder (configuration management)' },
+    { category: 'Systèmes', skills: 'Windows Server 2019/2022, Active Directory, GPO, Debian Linux, Rocky Linux, Sysprep / WinPE' },
+    { category: 'Réseaux', skills: 'VLAN 802.1Q, pfSense, Fortinet, Cisco, routage, DHCP, DNS, VPN, IDS/IPS Suricata, OPC-UA / Modbus, réseau OT/IT' },
+    { category: 'Supervision', skills: 'Zabbix, Wazuh (SIEM/XDR), Rudder (configuration management), ntopng, Arkime, OpenSearch' },
     { category: 'Virtualisation', skills: 'Proxmox, VirtualBox, VMware, Docker, Docker Compose' },
-    { category: 'ITSM', skills: 'GLPI, FusionInventory, ticketing N1/N2/N3' },
+    { category: 'ITSM', skills: 'GLPI, FusionInventory, ticketing N1/N2/N3, BookStack' },
     { category: 'Sécurité', skills: 'pare-feu, sauvegardes, droits utilisateurs, RGPD, analyse de logs' },
-    { category: 'Outils', skills: 'Git, PowerShell, Bash, SSH, Vaultwarden, Nextcloud' },
+    { category: 'Outils', skills: 'Git, PowerShell, Bash, SSH, Nginx, Vaultwarden, Nextcloud' },
+    { category: 'Développement web', skills: 'React, TypeScript, Vite, Tailwind CSS' },
   ];
 
   const certifications = [
