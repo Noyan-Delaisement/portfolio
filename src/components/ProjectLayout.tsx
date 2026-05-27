@@ -146,20 +146,29 @@ export default function ProjectLayout({
         {documents.length > 0 && (
           <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-white mb-4">Documents et productions</h2>
-            <ul className="space-y-2">
+            <div className="space-y-6">
               {documents.map((doc, index) => (
-                <li key={index} className="text-gray-300 flex items-start">
-                  <span className="text-[#4f8eff] mr-2">📄</span>
-                  {typeof doc === 'object' && doc.link ? (
-                    <a href={doc.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#4f8eff] transition-colors hover:underline">
-                      {doc.title}
-                    </a>
-                  ) : (
-                    <span>{typeof doc === 'object' ? doc.title : doc}</span>
+                <div key={index}>
+                  <div className="flex items-center gap-2 text-gray-300 mb-3">
+                    <span className="text-[#4f8eff]">📄</span>
+                    {typeof doc === 'object' && doc.link ? (
+                      <a href={doc.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#4f8eff] transition-colors hover:underline">
+                        {doc.title}
+                      </a>
+                    ) : (
+                      <span>{typeof doc === 'object' ? doc.title : doc}</span>
+                    )}
+                  </div>
+                  {typeof doc === 'object' && doc.link && doc.link.endsWith('.pdf') && (
+                    <iframe
+                      src={doc.link}
+                      className="w-full h-[750px] rounded border border-gray-700"
+                      title={doc.title}
+                    />
                   )}
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
         )}
 
