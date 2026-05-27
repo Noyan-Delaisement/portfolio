@@ -53,9 +53,7 @@ export default function ActiveDirectory() {
         },
       ]}
       documents={[
-        'Schéma d\'architecture du domaine',
-        'Documentation AD et GPO',
-        'Procédure de jonction au domaine',
+        { title: 'Documentation technique — Déploiement Active Directory & Intégration des IHM', link: '/Doc_AD_PREM_Automation.pdf' },
       ]}
       prevProject={{ title: 'Infrastructure réseau sécurisée', link: '/projets/infrastructure' }}
       nextProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}

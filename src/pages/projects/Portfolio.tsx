@@ -64,7 +64,7 @@ export default function Portfolio() {
       ]}
       documents={[
         { title: 'ndfolio.dlsmnt.fr — ce site', link: 'https://ndfolio.dlsmnt.fr' },
-        'Documentation technique hébergement et DNS',
+        'Document technique',
       ]}
       prevProject={{ title: 'BookStack — Wiki d\'infrastructure', link: '/projets/bookstack' }}
     />

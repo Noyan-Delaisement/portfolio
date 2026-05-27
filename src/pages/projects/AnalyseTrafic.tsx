@@ -86,10 +86,7 @@ export default function AnalyseTrafic() {
         },
       ]}
       documents={[
-        'Procédure de configuration port mirroring SPAN (Cisco SG500X)',
-        'Documentation déploiement Arkime + OpenSearch',
-        'Rapport d\'analyse des flux réseau identifiés',
-        'Captures PCAP et sessions analysées',
+        'Document technique',
       ]}
       prevProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
       nextProject={{ title: 'ntopng — Monitoring de trafic réseau', link: '/projets/ntopng' }}
