@@ -14,11 +14,11 @@ export default function Projets() {
 
   const projects = [
     {
-      emoji: '📡',
-      title: 'Infrastructure réseau sécurisée',
-      description: 'pfSense, règles de filtrage avancées, IDS/IPS Suricata, VLANs 802.1Q, DHCP, DNS',
+      emoji: '🏭',
+      title: 'Réseau Industriel Sécurisé — Orano TN',
+      description: 'pfSense 2.7 CE, 4 VLANs industriels, air gap, filtrage strict default deny, 16 IHM, automates',
       competencies: ['C1', 'C5'],
-      period: 'PREM Automation 2024/2025',
+      period: 'PREM Automation 2023/2024',
       link: '/projets/infrastructure',
     },
     {
