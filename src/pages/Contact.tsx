@@ -1,23 +1,8 @@
 import { Mail, MapPin, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
-import { useState, FormEvent } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    nom: '',
-    email: '',
-    sujet: '',
-    message: '',
-  });
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(formData.sujet);
-    const body = encodeURIComponent(`Nom : ${formData.nom}\n\n${formData.message}`);
-    window.location.href = `mailto:contact@dlsmnt.fr?subject=${subject}&body=${body}`;
-    setSent(true);
-    setTimeout(() => setSent(false), 5000);
-  };
+  const [state, handleSubmit] = useForm('mwvzjpvj');
 
   const contactInfo = [
     {
@@ -96,80 +81,88 @@ export default function Contact() {
         </div>
 
         <div className="bg-[#161b22] border border-gray-800 rounded-lg p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="nom" className="block text-sm font-medium text-gray-300 mb-2">
-                Nom
-              </label>
-              <input
-                type="text"
-                id="nom"
-                value={formData.nom}
-                onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
-                className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors"
-                required
-              />
+          {state.succeeded ? (
+            <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
+              <CheckCircle size={48} className="text-[#00d4a0]" />
+              <p className="text-xl font-semibold text-white">Message envoyé !</p>
+              <p className="text-gray-400">Je vous répondrai dans les meilleurs délais.</p>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="nom" className="block text-sm font-medium text-gray-300 mb-2">
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors"
+                  required
+                />
+              </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors"
-                required
-              />
-            </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors"
+                  required
+                />
+                <ValidationError field="email" errors={state.errors} className="text-red-400 text-sm mt-1" />
+              </div>
 
-            <div>
-              <label htmlFor="sujet" className="block text-sm font-medium text-gray-300 mb-2">
-                Sujet
-              </label>
-              <input
-                type="text"
-                id="sujet"
-                value={formData.sujet}
-                onChange={(e) => setFormData({ ...formData, sujet: e.target.value })}
-                className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors"
-                required
-              />
-            </div>
+              <div>
+                <label htmlFor="sujet" className="block text-sm font-medium text-gray-300 mb-2">
+                  Sujet
+                </label>
+                <input
+                  type="text"
+                  id="sujet"
+                  name="sujet"
+                  className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors"
+                  required
+                />
+              </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                rows={6}
-                className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors resize-none"
-                required
-              ></textarea>
-            </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  className="w-full px-4 py-3 bg-[#0d1117] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-[#4f8eff] transition-colors resize-none"
+                  required
+                />
+                <ValidationError field="message" errors={state.errors} className="text-red-400 text-sm mt-1" />
+              </div>
 
-            <button
-              type="submit"
-              className="w-full sm:w-auto px-8 py-3 bg-[#4f8eff] hover:bg-[#6ea8ff] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
-              {sent ? (
-                <>
-                  <CheckCircle size={18} />
-                  Client mail ouvert !
-                </>
-              ) : (
-                <>
-                  Envoyer
-                  <Send size={18} />
-                </>
+              {state.errors && state.errors.length > 0 && !state.errors.some((e: { field?: string }) => e.field) && (
+                <p className="text-red-400 text-sm">Une erreur est survenue. Veuillez réessayer.</p>
               )}
-            </button>
-          </form>
+
+              <button
+                type="submit"
+                disabled={state.submitting}
+                className="w-full sm:w-auto px-8 py-3 bg-[#4f8eff] hover:bg-[#6ea8ff] disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                {state.submitting ? (
+                  <span>Envoi en cours…</span>
+                ) : (
+                  <>
+                    Envoyer
+                    <Send size={18} />
+                  </>
+                )}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>
