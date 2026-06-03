@@ -51,8 +51,8 @@ export default function Engagement() {
 
   const comparisons = [
     {
-      snsm: 'Protocoles radio VHF standardisés (canal 16, DSC, MAYDAY)',
-      sisr: 'Protocoles réseau standardisés (TCP/IP, VLAN, 802.1Q)',
+      snsm: 'Veille permanente canal 16 — surveillance continue, détection immédiate de toute alerte',
+      sisr: 'Supervision et monitoring — Wazuh, alerting en temps réel sur les systèmes',
     },
     {
       snsm: 'Gestion d\'incident & escalade (MAYDAY → CROSS → coordination)',
@@ -82,7 +82,7 @@ export default function Engagement() {
           <p className="text-gray-300 text-lg max-w-3xl leading-relaxed">
             En parallèle de ma formation BTS SIO SISR et de mon apprentissage chez PREM Automation,
             je suis bénévole nageur sauveteur à la <strong className="text-white">SNSM Toulouse</strong> depuis
-            plus de 2 ans.
+            plus de 4 ans.
           </p>
         </div>
 
@@ -100,8 +100,7 @@ export default function Engagement() {
             de sauvetages en mer et en eaux intérieures.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            Notre station est basée à <strong className="text-white">l'Île du Ramier (Toulouse)</strong>, sur les voies
-            navigables de la Garonne. J'y assure des missions de surveillance, de sauvetage et de
+            Notre station est basée à <strong className="text-white">Portet sur garonne (Toulouse)</strong>, J'y assure des missions de surveillance, de sauvetage et de
             formation aux côtés d'une équipe de bénévoles expérimentés.
           </p>
         </section>
