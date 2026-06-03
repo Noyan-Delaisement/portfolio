@@ -13,6 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'Projets', path: '/projets' },
     { name: 'Veille', path: '/veille' },
     { name: 'Tableau E5', path: '/tableau-synthese' },
+    { name: 'Engagement', path: '/engagement' },
     { name: 'Contact', path: '/contact' },
   ];
 

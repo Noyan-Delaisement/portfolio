@@ -18,6 +18,7 @@ import Ntopng from './pages/projects/Ntopng';
 import Veille from './pages/Veille';
 import TableauSynthese from './pages/TableauSynthese';
 import Contact from './pages/Contact';
+import Engagement from './pages/Engagement';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/veille" element={<Veille />} />
           <Route path="/tableau-synthese" element={<TableauSynthese />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/engagement" element={<Engagement />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
