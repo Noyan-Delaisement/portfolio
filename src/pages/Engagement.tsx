@@ -1,4 +1,4 @@
-import { Anchor, Award, Shield, Radio, BookOpen, Download, ArrowRight } from 'lucide-react';
+import { Anchor, Award, Shield, Radio, BookOpen, ArrowRight } from 'lucide-react';
 
 export default function Engagement() {
   const certifications = [
@@ -188,20 +188,20 @@ export default function Engagement() {
           </div>
         </section>
 
-        {/* Téléchargement */}
+        {/* Document EF4 */}
         <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-white mb-2">Document EF4</h2>
           <p className="text-gray-400 text-sm mb-5">
             Présentation réalisée dans le cadre de l'épreuve EF4 — Engagement étudiant du BTS SIO.
           </p>
           <a
-            href="https://docs.google.com/presentation/d/1ZZeeg-adjoxmJ9ACnAXrXWnl5jl_zLS8UZbrRTEJiTU/export/pptx"
+            href="https://docs.google.com/presentation/d/1ZZeeg-adjoxmJ9ACnAXrXWnl5jl_zLS8UZbrRTEJiTU/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#4f8eff] hover:bg-[#6ea8ff] text-white font-medium rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 text-[#4f8eff] hover:text-[#6ea8ff] transition-colors hover:underline"
           >
-            <Download size={18} />
-            Télécharger la présentation EF4 (PPTX)
+            Voir la présentation EF4 sur Google Slides
+            <ArrowRight size={16} />
           </a>
         </section>
 
