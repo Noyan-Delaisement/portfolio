@@ -195,8 +195,9 @@ export default function Engagement() {
             Présentation réalisée dans le cadre de l'épreuve EF4 — Engagement étudiant du BTS SIO.
           </p>
           <a
-            href="/EF4_Engagement_Etudiant_SNSM.pptx"
-            download
+            href="https://docs.google.com/presentation/d/1ZZeeg-adjoxmJ9ACnAXrXWnl5jl_zLS8UZbrRTEJiTU/export/pptx"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#4f8eff] hover:bg-[#6ea8ff] text-white font-medium rounded-lg transition-colors"
           >
             <Download size={18} />
