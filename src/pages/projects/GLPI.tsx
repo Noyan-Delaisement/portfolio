@@ -71,8 +71,6 @@ export default function GLPI() {
         'FusionInventory',
       ]}
       documents={[]}
-      prevProject={{ title: 'Supervision Wazuh', link: '/projets/supervision' }}
-      nextProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
     />
   );
 }

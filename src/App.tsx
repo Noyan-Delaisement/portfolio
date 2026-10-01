@@ -15,6 +15,8 @@ import MasterisationIHM from './pages/projects/MasterisationIHM';
 import AnalyseTrafic from './pages/projects/AnalyseTrafic';
 import BookStack from './pages/projects/BookStack';
 import Ntopng from './pages/projects/Ntopng';
+import Homelab from './pages/projects/Homelab';
+import Videosurveillance from './pages/projects/Videosurveillance';
 import Veille from './pages/Veille';
 import Contact from './pages/Contact';
 import Engagement from './pages/Engagement';
@@ -40,6 +42,8 @@ function App() {
           <Route path="/projets/bookstack" element={<BookStack />} />
           <Route path="/projets/ntopng" element={<Ntopng />} />
           <Route path="/projets/portfolio" element={<Portfolio />} />
+          <Route path="/projets/homelab" element={<Homelab />} />
+          <Route path="/projets/videosurveillance" element={<Videosurveillance />} />
           <Route path="/veille" element={<Veille />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/engagement" element={<Engagement />} />

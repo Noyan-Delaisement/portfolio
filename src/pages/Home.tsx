@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
+import AlternanceCard from '../components/AlternanceCard';
+import { projects } from '../data/projects';
 
 export default function Home() {
-  const skillCards = [
+  const skillCards: { title: string; items: string[]; link?: { to: string; label: string } }[] = [
     {
       title: 'Compétences techniques',
       items: [
@@ -15,13 +17,14 @@ export default function Home() {
     {
       title: 'Projets réalisés',
       items: [
-        'Infrastructure réseau',
-        'Active Directory',
-        'Supervision Wazuh',
-        'GLPI Ticketing',
-        'Rudder',
-        'Portfolio web',
+        'Homelab (FortiGate, Proxmox, Docker)',
+        'SIEM Wazuh + intégration GLPI',
+        'Réseau industriel sécurisé (pfSense, VLAN)',
+        'Active Directory & GPO',
+        'Vidéosurveillance IP',
+        'Portfolio React / TypeScript',
       ],
+      link: { to: '/projets', label: `Voir les ${projects.length} projets →` },
     },
     {
       title: 'Formation',
@@ -63,7 +66,7 @@ export default function Home() {
               infrastructures IT. Titulaire du BTS SIO SISR après un apprentissage chez PREM
               Automation à Toulouse, je recherche une alternance pour mon Bachelor.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4 pt-4">
               <Link
                 to="/projets"
                 className="group w-full sm:w-auto px-8 py-3 bg-[#4f8eff] hover:bg-[#6ea8ff] text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2"
@@ -77,8 +80,22 @@ export default function Home() {
               >
                 Me contacter
               </Link>
+              <a
+                href="/Delaisement_Noyan.pdf"
+                download
+                className="w-full sm:w-auto px-8 py-3 bg-transparent border-2 border-gray-600 hover:border-[#4f8eff] text-gray-300 hover:text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2"
+              >
+                <Download size={18} />
+                Télécharger mon CV
+              </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <AlternanceCard />
         </div>
       </section>
 
@@ -99,6 +116,14 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                {card.link && (
+                  <Link
+                    to={card.link.to}
+                    className="inline-block mt-4 text-sm font-medium text-[#4f8eff] hover:text-[#6ea8ff] transition-colors"
+                  >
+                    {card.link.label}
+                  </Link>
+                )}
               </div>
             ))}
           </div>

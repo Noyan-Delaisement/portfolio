@@ -27,7 +27,7 @@ export default function MasterisationIHM() {
   return (
     <ProjectLayout
       label="Déploiement & Environnement industriel"
-      title="Masterisation & Configuration IHM Windows"
+      title="Masterisation & déploiement IHM Windows — MDT / WDS"
       period="2024/2025"
       context="PREM Automation"
       role="Technicien informatique apprenti"
@@ -37,7 +37,9 @@ export default function MasterisationIHM() {
       actions={[
         'Analyse des besoins matériels et logiciels pour chaque site client',
         'Création et maintenance de l\'image master Windows (sysprep, drivers, logiciels pré-installés)',
-        'Déploiement des postes à partir du master via clé bootable ou réseau',
+        'Mise en place d\'un serveur de déploiement : Microsoft Deployment Toolkit (MDT), Windows ADK / WinPE et rôle WDS',
+        'Création du Deployment Share, de la séquence de tâches MDT, des scripts personnalisés et des fichiers de règles (Bootstrap.ini)',
+        'Déploiement automatisé par le réseau : démarrage PXE via WDS, chargement de WinPE et exécution de la séquence MDT',
         'Configuration réseau industriel : adressage IP statique, paramétrage interfaces réseau OT',
         'Installation et paramétrage des logiciels IHM (supervision automates, communication OPC-UA/Modbus)',
         'Réalisation des tests d\'intégration : communication poste IHM ↔ automate, validation des écrans de supervision',
@@ -53,6 +55,10 @@ export default function MasterisationIHM() {
       techStack={[
         'Windows 10 / 11',
         'Sysprep / WinPE',
+        'MDT',
+        'Windows ADK',
+        'WDS',
+        'PXE',
         'IHM industrielle (Wonderware, Vijeo)',
         'OPC-UA / Modbus',
         'Réseau OT / IT',
@@ -64,8 +70,6 @@ export default function MasterisationIHM() {
       documents={[
         { title: 'Documentation technique Masterisation IHM', link: '/Masterisation_IHM.pdf' },
       ]}
-      prevProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
-      nextProject={{ title: 'BookStack — Wiki d\'infrastructure', link: '/projets/bookstack' }}
     />
   );
 }

@@ -70,7 +70,6 @@ export default function Infrastructure() {
         'Windows Embedded / 10',
       ]}
       documents={[]}
-      nextProject={{ title: 'Active Directory & GPO', link: '/projets/active-directory' }}
     />
   );
 }

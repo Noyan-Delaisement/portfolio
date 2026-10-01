@@ -64,8 +64,6 @@ export default function Ntopng() {
       documents={[
         { title: 'Documentation technique — Déploiement ntopng', link: '/ntopng.pdf' },
       ]}
-      prevProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
-      nextProject={{ title: 'Masterisation & Configuration IHM Windows', link: '/projets/masterisation-ihm' }}
     />
   );
 }

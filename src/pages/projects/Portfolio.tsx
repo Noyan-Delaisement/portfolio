@@ -13,7 +13,9 @@ export default function Portfolio() {
       actions={[
         'Choix solution technique : React 18 + TypeScript + Vite + Tailwind CSS',
         'Achat et configuration nom de domaine dlsmnt.fr, sous-domaine ndfolio.dlsmnt.fr',
-        'Mise en place hébergement web et configuration DNS',
+        'Hébergement sur un conteneur LXC Debian chez Hetzner, exposé via Cloudflare Tunnel derrière Nginx (journalisation de la vraie IP des visiteurs)',
+        'Second déploiement conteneurisé sur un Raspberry Pi 5 : build Node éphémère puis service par Nginx',
+        'Formulaire de contact via Formspree',
         'Conception architecture du site : routing React Router, composants réutilisables (Layout, ProjectLayout)',
         'Création pages : Profil, Formation, Projets (fiches détaillées), Veille, Engagement, Contact',
         'Build et déploiement via Vite en site statique',
@@ -32,13 +34,16 @@ export default function Portfolio() {
         'React Router',
         'Lucide React',
         'DNS',
-        'Hébergement web',
+        'Hetzner (LXC Debian)',
+        'Cloudflare Tunnel',
+        'Nginx',
+        'Docker',
+        'Formspree',
         'Git / GitHub',
       ]}
       documents={[
         { title: 'ndfolio.dlsmnt.fr — ce site', link: 'https://ndfolio.dlsmnt.fr' },
       ]}
-      prevProject={{ title: 'BookStack — Wiki d\'infrastructure', link: '/projets/bookstack' }}
     />
   );
 }

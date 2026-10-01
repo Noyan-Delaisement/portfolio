@@ -58,8 +58,6 @@ export default function Rudder() {
       documents={[
         { title: 'Documentation Rudder', link: '/rudder.pdf' },
       ]}
-      prevProject={{ title: 'Active Directory & GPO', link: '/projets/active-directory' }}
-      nextProject={{ title: 'Supervision Wazuh', link: '/projets/supervision' }}
     />
   );
 }

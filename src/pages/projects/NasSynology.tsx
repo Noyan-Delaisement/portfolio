@@ -62,8 +62,6 @@ export default function NasSynology() {
         'Debian Linux',
       ]}
       documents={[]}
-      prevProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}
-      nextProject={{ title: 'Analyse trafic réseau', link: '/projets/analyse-trafic' }}
     />
   );
 }

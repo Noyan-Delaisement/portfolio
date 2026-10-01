@@ -60,8 +60,6 @@ export default function AnalyseTrafic() {
         'PCAP',
       ]}
       documents={[]}
-      prevProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
-      nextProject={{ title: 'ntopng — Monitoring de trafic réseau', link: '/projets/ntopng' }}
     />
   );
 }

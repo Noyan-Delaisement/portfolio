@@ -34,8 +34,6 @@ export default function ActiveDirectory() {
         'Windows 10/11 Pro',
       ]}
       documents={[]}
-      prevProject={{ title: 'Infrastructure réseau sécurisée', link: '/projets/infrastructure' }}
-      nextProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
     />
   );
 }

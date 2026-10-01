@@ -65,8 +65,6 @@ export default function BookStack() {
       documents={[
         { title: 'Documentation technique BookStack sur Docker Compose', link: '/documentation-bookstack-compose.pdf' },
       ]}
-      prevProject={{ title: 'Masterisation & Configuration IHM Windows', link: '/projets/masterisation-ihm' }}
-      nextProject={{ title: 'Portfolio professionnel', link: '/projets/portfolio' }}
     />
   );
 }

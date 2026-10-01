@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { projects } from '../data/projects';
 
 interface ProjectLayoutProps {
   label: string;
@@ -12,8 +13,6 @@ interface ProjectLayoutProps {
   results: string[];
   techStack: string[];
   documents: (string | { title: string; link: string })[];
-  prevProject?: { title: string; link: string };
-  nextProject?: { title: string; link: string };
   headerColor: string;
   infoBox?: React.ReactNode;
 }
@@ -29,11 +28,17 @@ export default function ProjectLayout({
   results,
   techStack,
   documents,
-  prevProject,
-  nextProject,
   headerColor,
   infoBox,
 }: ProjectLayoutProps) {
+  const { pathname } = useLocation();
+  const currentIndex = projects.findIndex(
+    (project) => `/projets/${project.slug}` === pathname.replace(/\/$/, '')
+  );
+  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : undefined;
+  const nextProject =
+    currentIndex >= 0 && currentIndex < projects.length - 1 ? projects[currentIndex + 1] : undefined;
+
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto space-y-8">
@@ -144,22 +149,22 @@ export default function ProjectLayout({
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-800">
           {prevProject ? (
             <Link
-              to={prevProject.link}
+              to={`/projets/${prevProject.slug}`}
               className="flex items-center gap-2 text-gray-400 hover:text-[#4f8eff] transition-colors"
             >
-              <ChevronLeft size={20} />
-              <span>Projet précédent</span>
+              <ChevronLeft size={20} className="flex-shrink-0" />
+              <span>{prevProject.title}</span>
             </Link>
           ) : (
             <div></div>
           )}
           {nextProject ? (
             <Link
-              to={nextProject.link}
-              className="flex items-center gap-2 text-gray-400 hover:text-[#4f8eff] transition-colors"
+              to={`/projets/${nextProject.slug}`}
+              className="flex items-center gap-2 text-gray-400 hover:text-[#4f8eff] transition-colors sm:text-right"
             >
-              <span>Projet suivant</span>
-              <ChevronRight size={20} />
+              <span>{nextProject.title}</span>
+              <ChevronRight size={20} className="flex-shrink-0" />
             </Link>
           ) : (
             <div></div>

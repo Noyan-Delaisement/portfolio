@@ -1,86 +1,17 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FolderOpen, ArrowRight } from 'lucide-react';
+import { projects, type ProjectCategory } from '../data/projects';
+
+type Filter = 'Tous' | ProjectCategory;
+
+const filters: Filter[] = ['Tous', 'Entreprise', 'Formation', 'Personnel'];
 
 export default function Projets() {
-  const projects = [
-    {
-      emoji: '🏭',
-      title: 'Réseau industriel sécurisé — site client sensible',
-      description: 'pfSense 2.7 CE, 4 VLANs industriels, air gap, filtrage strict default deny, 16 IHM, automates',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/infrastructure',
-    },
-    {
-      emoji: '🖥️',
-      title: 'Active Directory & GPO',
-      description: 'Windows Server, domaine AD, Unités d\'Organisation, stratégies de groupe, droits d\'accès',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/active-directory',
-    },
-    {
-      emoji: '🔧',
-      title: 'Rudder — Gestion de configuration',
-      description: 'Standardisation 3 serveurs, compliance, mises à jour automatiques sécurisées',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/rudder',
-    },
-    {
-      emoji: '🛡️',
-      title: 'Supervision Wazuh',
-      description: 'SIEM Wazuh, collecte et analyse logs sécurité, détection des menaces, intégration Active Directory',
-      period: 'Infrastructure scolaire 2025/2026',
-      link: '/projets/supervision',
-    },
-    {
-      emoji: '🎫',
-      title: 'GLPI Ticketing N1/N2/N3',
-      description: 'Implémentation GLPI, structure support IT hiérarchique, workflows escalade, catalogue services',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/glpi',
-    },
-    {
-      emoji: '💾',
-      title: 'Sauvegarde NAS Synology',
-      description: 'Réplication entre 3 NAS Synology via Hyper Backup, dumps MySQL automatisés via Rudder, stratégie 3-2-1',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/nas-synology',
-    },
-    {
-      emoji: '🔍',
-      title: 'Analyse trafic réseau',
-      description: 'Port mirroring SPAN sur Cisco SG500X, capture et analyse avec ntopng et Arkime/OpenSearch',
-      period: 'Infrastructure scolaire 2024/2025',
-      link: '/projets/analyse-trafic',
-    },
-    {
-      emoji: '📊',
-      title: 'ntopng — Monitoring de trafic réseau',
-      description: 'Déploiement ntopng Community Edition, port SPAN, analyse DPI 500+ protocoles, dashboard temps réel',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/ntopng',
-    },
-    {
-      emoji: '🏭',
-      title: 'Masterisation & Configuration IHM Windows',
-      description: 'Masterisation des postes Windows, déploiement et paramétrage des interfaces IHM pour automates industriels, configuration réseau industriel, tests d\'intégration',
-      period: 'PREM Automation 2024/2025',
-      link: '/projets/masterisation-ihm',
-    },
-    {
-      emoji: '📚',
-      title: 'BookStack — Wiki d\'infrastructure',
-      description: 'Wiki de documentation conteneurisé via Docker Compose, intégration LDAP/Active Directory, reverse proxy HTTPS Nginx',
-      period: 'Infrastructure scolaire 2026',
-      link: '/projets/bookstack',
-    },
-    {
-      emoji: '🌐',
-      title: 'Portfolio professionnel',
-      description: 'React, TypeScript, Vite, Tailwind CSS, DNS, hébergement, identité professionnelle en ligne',
-      period: 'Projet personnel 2025/2026',
-      link: '/projets/portfolio',
-    },
-  ];
+  const [filter, setFilter] = useState<Filter>('Tous');
+
+  const visibleProjects =
+    filter === 'Tous' ? projects : projects.filter((project) => project.category === filter);
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
@@ -98,11 +29,29 @@ export default function Projets() {
           </p>
         </div>
 
+        <div className="flex flex-wrap gap-2">
+          {filters.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() => setFilter(item)}
+              aria-pressed={filter === item}
+              className={`px-4 py-1.5 rounded-full text-sm border transition-colors ${
+                filter === item
+                  ? 'bg-[#4f8eff]/20 text-[#4f8eff] border-[#4f8eff]/30 font-medium'
+                  : 'bg-[#161b22] text-gray-400 border-gray-800 hover:text-white hover:border-gray-600'
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project) => (
             <Link
-              key={index}
-              to={project.link}
+              key={project.slug}
+              to={`/projets/${project.slug}`}
               className="group bg-[#161b22] border border-gray-800 rounded-lg p-6 hover:border-[#4f8eff] transition-all hover:shadow-lg hover:shadow-[#4f8eff]/10"
             >
               <div className="space-y-4">
@@ -111,7 +60,9 @@ export default function Projets() {
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
-                <p className="text-xs text-gray-500">{project.period}</p>
+                <p className="text-xs text-gray-500">
+                  {project.category} — {project.period}
+                </p>
                 <div className="flex items-center gap-2 text-[#4f8eff] text-sm font-medium pt-2">
                   Voir le projet
                   <ArrowRight

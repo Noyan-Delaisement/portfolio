@@ -1,5 +1,6 @@
 import { Mail, MapPin, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
+import AlternanceCard from '../components/AlternanceCard';
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('mwvzjpvj');
@@ -46,6 +47,8 @@ export default function Contact() {
             pour toute opportunité ou collaboration technique.
           </p>
         </div>
+
+        <AlternanceCard />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {contactInfo.map((info, index) => {

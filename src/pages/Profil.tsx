@@ -2,13 +2,13 @@ import { User, Zap, Target, Lightbulb, Users, TrendingUp, Download } from 'lucid
 
 export default function Profil() {
   const technicalSkills = [
-    { category: 'Systèmes', skills: 'Windows Server 2019/2022, Active Directory, GPO, Debian Linux, Rocky Linux, Sysprep / WinPE' },
+    { category: 'Systèmes', skills: 'Windows Server 2019/2022, Active Directory, GPO, Debian Linux, Rocky Linux, Sysprep / WinPE, MDT / WDS' },
     { category: 'Réseaux', skills: 'VLAN 802.1Q, pfSense, Fortinet, Cisco, routage, DHCP, DNS, VPN, IDS/IPS Suricata, OPC-UA / Modbus, réseau OT/IT' },
-    { category: 'Supervision', skills: 'Zabbix, Wazuh (SIEM/XDR), Rudder (configuration management), ntopng, Arkime, OpenSearch' },
-    { category: 'Virtualisation', skills: 'Proxmox, VirtualBox, VMware, Docker, Docker Compose' },
+    { category: 'Supervision', skills: 'Zabbix, Wazuh (SIEM/XDR), Rudder (configuration management), ntopng, Arkime, OpenSearch, Grafana' },
+    { category: 'Virtualisation', skills: 'Proxmox (VM / LXC), VirtualBox, VMware, Docker, Docker Compose' },
     { category: 'ITSM', skills: 'GLPI, FusionInventory, ticketing N1/N2/N3, BookStack' },
     { category: 'Sécurité', skills: 'pare-feu, sauvegardes, droits utilisateurs, RGPD, analyse de logs' },
-    { category: 'Outils', skills: 'Git, PowerShell, Bash, SSH, Nginx, Vaultwarden, Nextcloud' },
+    { category: 'Outils', skills: 'Git, PowerShell, Bash, SSH, Nginx, Vaultwarden, Nextcloud, Ansible, Python, Gitea, Cloudflare Tunnel, Tailscale, Pi-hole' },
     { category: 'Développement web', skills: 'React, TypeScript, Vite, Tailwind CSS' },
   ];
 
@@ -16,6 +16,7 @@ export default function Profil() {
     { name: 'Linux Unhatched — Cisco NetAcad', date: '11/07/2025' },
     { name: 'Pre-Security — TryHackMe', date: '24/04/2025' },
     { name: 'CCNA — Cisco Certified Network Associate', date: 'En cours' },
+    { name: 'LFCS — Linux Foundation Certified System Administrator', date: 'En préparation' },
   ];
 
   const languages = [
@@ -110,7 +111,7 @@ export default function Profil() {
             {certifications.map((cert, index) => (
               <div key={index} className="bg-[#161b22] border border-gray-800 rounded-lg p-5 flex items-center justify-between hover:border-[#4f8eff]/50 transition-colors">
                 <span className="text-gray-300">{cert.name}</span>
-                <span className={`text-sm font-medium px-3 py-1 rounded-full border ${cert.date === 'En cours' ? 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30' : 'text-[#00d4a0] bg-[#00d4a0]/10 border-[#00d4a0]/30'}`}>
+                <span className={`text-sm font-medium px-3 py-1 rounded-full border ${['En cours', 'En préparation'].includes(cert.date) ? 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30' : 'text-[#00d4a0] bg-[#00d4a0]/10 border-[#00d4a0]/30'}`}>
                   {cert.date}
                 </span>
               </div>

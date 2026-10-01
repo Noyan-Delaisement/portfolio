@@ -33,16 +33,29 @@ export default function Supervision() {
       infoBox={infoBox}
       contextText="Infrastructure scolaire — CFAI Beauzelle (4 serveurs, 10+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Les incidents passaient inaperçus, aucune détection sécurité en place. Objectif : déployer un SIEM pour la collecte de logs et la détection des menaces."
       actions={[
-        'Déploiement Wazuh (SIEM) pour collecte et analyse logs de sécurité',
-        'Résolution incidents de compliance détectés lors mise en place',
-        'Documentation tableaux de bord, alertes et procédures d\'escalade',
+        'Déploiement de Wazuh 4.14 en all-in-one (manager, indexer OpenSearch, dashboard)',
+        'Authentification du dashboard via Active Directory / LDAP, avec des rôles par groupe (WazuhAdmins / WazuhUsers)',
+        'Surveillance d\'intégrité des fichiers (FIM) en temps réel, configurée de façon centralisée via agent.conf',
+        'Politiques SCA (Security Configuration Assessment) adaptées à Debian 13',
+        'Active Response : blocage automatique des attaques par force brute SSH (règle 5763, firewall-drop)',
+        'Supervision des conteneurs Docker',
+        'Développement d\'une intégration Python Wazuh → GLPI : tickets créés automatiquement par catégorie (Sécurité, Intrusion, FIM, Vulnérabilité), filtrage des CVE à CVSS ≥ 9.0 et déduplication',
+        'Versionnement de la configuration Wazuh dans un dépôt Gitea (authentification AD)',
+        'Documentation des tableaux de bord, alertes et procédures d\'escalade',
       ]}
       results={[
-        'Détection proactive incidents',
-        'Détection automatique des menaces via Wazuh',
+        'Détection automatique des menaces et des modifications de fichiers sensibles',
+        'Blocage automatique des tentatives de force brute SSH',
+        'Tickets GLPI créés automatiquement pour les vulnérabilités critiques, sans doublon',
+        'Configuration reproductible et historisée grâce au versionnement Git',
       ]}
       techStack={[
-        'Wazuh SIEM',
+        'Wazuh 4.14',
+        'OpenSearch',
+        'Active Directory / LDAP',
+        'Python',
+        'GLPI',
+        'Gitea',
         'Rudder',
         'Docker',
         'Debian Linux',
@@ -53,8 +66,6 @@ export default function Supervision() {
       documents={[
         { title: 'Documentation Wazuh SIEM', link: '/wazuh.pdf' },
       ]}
-      prevProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
-      nextProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}
     />
   );
 }
