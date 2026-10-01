@@ -144,7 +144,7 @@ export default function Contact() {
                 <ValidationError field="message" errors={state.errors} className="text-red-400 text-sm mt-1" />
               </div>
 
-              {state.errors && state.errors.length > 0 && !state.errors.some((e: { field?: string }) => e.field) && (
+              {state.errors && state.errors.getFormErrors().length > 0 && (
                 <p className="text-red-400 text-sm">Une erreur est survenue. Veuillez réessayer.</p>
               )}
 
