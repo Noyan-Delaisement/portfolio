@@ -4,7 +4,7 @@ export default function Formation() {
   const experience = {
     company: 'PREM Automation',
     role: 'Technicien informatique apprenti',
-    period: '2024 — présent',
+    period: '2024 — juin 2026',
     location: 'Toulouse, France',
     missions: [
       'Administration infrastructure 2 serveurs / 10+ services',
@@ -19,8 +19,19 @@ export default function Formation() {
 
   const formations = [
     {
+      title: 'Bachelor Systèmes, Réseaux & Cloud Computing',
+      period: 'Septembre 2026 — présent',
+      institution: 'ESGI Toulouse',
+      modules: [
+        'Spécialisation Cloud',
+        'Virtualisation',
+        'Cybersécurité avancée',
+        'Alternance (en recherche)',
+      ],
+    },
+    {
       title: 'BTS SIO option SISR',
-      period: '2024-2026',
+      period: '2024-2026 — diplôme obtenu',
       institution: 'CFAI Beauzelle — Toulouse',
       modules: [
         'Administration systèmes',
@@ -28,17 +39,6 @@ export default function Formation() {
         'Sécurité informatique',
         'Cybersécurité',
         'Projet professionnel',
-      ],
-    },
-    {
-      title: 'Bachelor Systèmes, Réseaux & Cloud Computing',
-      period: 'À partir de septembre 2026',
-      institution: 'ESGI Toulouse',
-      modules: [
-        'Spécialisation Cloud',
-        'Virtualisation',
-        'Cybersécurité avancée',
-        'Alternance',
       ],
     },
   ];

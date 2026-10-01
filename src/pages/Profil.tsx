@@ -55,13 +55,14 @@ export default function Profil() {
         <section className="bg-[#161b22] border border-gray-800 rounded-lg p-8">
           <h2 className="text-2xl font-semibold text-white mb-6">Présentation</h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            Je suis Noyan DELAISEMENT, technicien informatique en apprentissage chez PREM Automation
-            à Toulouse dans le cadre de mon BTS SIO option SISR. Je gère au quotidien une
+            Je suis Noyan DELAISEMENT, étudiant en Bachelor Systèmes, Réseaux & Cloud Computing à
+            l'ESGI Toulouse depuis septembre 2026 et titulaire du BTS SIO option SISR. Pendant mon
+            apprentissage chez PREM Automation à Toulouse, j'ai géré au quotidien une
             infrastructure composée de <span className="text-[#4f8eff] font-medium">3 serveurs</span> et plus de{' '}
             <span className="text-[#4f8eff] font-medium">20 services</span> (Active Directory, Docker, Vaultwarden,
             Nextcloud, Zabbix, Wazuh, Rudder, GLPI). Passionné par les réseaux, la cybersécurité et
-            l'administration système, je prépare également mon entrée en Bachelor Systèmes, Réseaux
-            & Cloud Computing à l'ESGI Toulouse en septembre 2026.
+            l'administration système, je suis à la recherche d'une alternance pour la durée de mon
+            Bachelor.
           </p>
         </section>
 

@@ -113,8 +113,8 @@ export default function Projets() {
           </h1>
           <div className="h-1 w-24 bg-[#4f8eff] rounded"></div>
           <p className="text-gray-300 text-lg max-w-4xl leading-relaxed">
-            Voici l'ensemble de mes réalisations professionnelles réalisées en entreprise chez PREM
-            Automation et en formation BTS SIO SISR. Chaque projet détaille le contexte, les actions
+            Voici l'ensemble de mes réalisations professionnelles menées en entreprise chez PREM
+            Automation et durant mon BTS SIO SISR. Chaque projet détaille le contexte, les actions
             menées, les outils utilisés et les compétences du bloc E5 mobilisées.
           </p>
         </div>

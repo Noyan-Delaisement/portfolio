@@ -94,11 +94,11 @@ export default function Veille() {
   const timeline = [
     {
       period: '2024–2026',
-      title: 'BTS SIO SISR en apprentissage chez PREM Automation, Toulouse',
+      title: 'BTS SIO SISR en apprentissage chez PREM Automation, Toulouse — diplôme obtenu',
     },
     {
-      period: 'Septembre 2026',
-      title: 'Bachelor Systèmes, Réseaux & Cloud Computing — ESGI Toulouse — en alternance',
+      period: 'Depuis septembre 2026',
+      title: 'Bachelor Systèmes, Réseaux & Cloud Computing — ESGI Toulouse — à la recherche d\'une alternance',
     },
     {
       period: 'Objectif',

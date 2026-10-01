@@ -26,8 +26,8 @@ export default function Home() {
     {
       title: 'Formation',
       items: [
-        'BTS SIO SISR (2024-2026)',
-        'ESGI Bachelor Systèmes Réseaux Cloud (Sept. 2026)',
+        'ESGI Bachelor Systèmes Réseaux Cloud (2026 — en cours)',
+        'BTS SIO SISR (2024-2026) — obtenu',
       ],
     },
     {
@@ -50,17 +50,18 @@ export default function Home() {
           <div className="text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00d4a0]/10 border border-[#00d4a0]/30 rounded-full text-sm text-[#00d4a0] font-medium">
               <span className="w-2 h-2 rounded-full bg-[#00d4a0] animate-pulse"></span>
-              Disponible en alternance — Septembre 2026
+              À la recherche d'une alternance — Disponible immédiatement
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight">
               DELAISEMENT Noyan
             </h1>
             <p className="text-xl sm:text-2xl text-[#4f8eff] font-medium">
-              BTS SIO SISR — Technicien informatique en apprentissage
+              Bachelor Systèmes, Réseaux & Cloud Computing — ESGI Toulouse
             </p>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Passionné par l'administration systèmes & réseaux, la cybersécurité et les
-              infrastructures IT. Actuellement en apprentissage chez PREM Automation à Toulouse.
+              infrastructures IT. Titulaire du BTS SIO SISR après un apprentissage chez PREM
+              Automation à Toulouse, je recherche une alternance pour mon Bachelor.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link

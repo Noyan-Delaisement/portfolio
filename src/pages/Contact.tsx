@@ -41,8 +41,9 @@ export default function Contact() {
           </h1>
           <div className="h-1 w-24 bg-[#4f8eff] rounded mx-auto"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            N'hésitez pas à me contacter pour toute opportunité d'alternance, de stage ou de
-            collaboration technique. Disponible pour une alternance à partir de septembre 2026.
+            Étudiant en Bachelor Systèmes, Réseaux & Cloud Computing à l'ESGI Toulouse, je suis à
+            la recherche d'une alternance et disponible immédiatement. N'hésitez pas à me contacter
+            pour toute opportunité ou collaboration technique.
           </p>
         </div>
 

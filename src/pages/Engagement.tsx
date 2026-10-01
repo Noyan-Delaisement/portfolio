@@ -80,7 +80,7 @@ export default function Engagement() {
           </h1>
           <div className="h-1 w-24 bg-[#4f8eff] rounded"></div>
           <p className="text-gray-300 text-lg max-w-3xl leading-relaxed">
-            En parallèle de ma formation BTS SIO SISR et de mon apprentissage chez PREM Automation,
+            En parallèle de mes études, du BTS SIO SISR au Bachelor à l'ESGI Toulouse,
             je suis bénévole nageur sauveteur à la <strong className="text-white">SNSM Toulouse</strong> depuis
             plus de 4 ans.
           </p>
@@ -100,7 +100,7 @@ export default function Engagement() {
             de sauvetages en mer et en eaux intérieures.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            Notre station est basée à <strong className="text-white">Portet sur garonne (Toulouse)</strong>, J'y assure des missions de surveillance, de sauvetage et de
+            Notre station est basée à <strong className="text-white">Portet-sur-Garonne (Toulouse)</strong>. J'y assure des missions de surveillance, de sauvetage et de
             formation aux côtés d'une équipe de bénévoles expérimentés.
           </p>
         </section>
