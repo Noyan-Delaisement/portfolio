@@ -28,7 +28,7 @@ export default function Rudder() {
       title="Rudder — Gestion de configuration"
       period="2024/2025"
       context="PREM Automation"
-      role="Technicien apprenti"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-purple-900/50 to-pink-900/50"
       infoBox={infoBox}
       contextText="Infrastructure PREM Automation gérée manuellement, configurations incohérentes entre machines, mises à jour sécurité non systématiques. Objectif : déployer Rudder pour standardiser et automatiser gestion de configuration."

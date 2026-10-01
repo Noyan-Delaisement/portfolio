@@ -26,9 +26,9 @@ export default function Supervision() {
     <ProjectLayout
       label="Supervision & Sécurité"
       title="Supervision Wazuh"
-      period="2024/2025"
-      context="CFAI Beauzelle"
-      role="Étudiant apprenti"
+      period="2025/2026"
+      context="CFAI Beauzelle — infrastructure de formation"
+      role="Étudiant en BTS SIO SISR"
       headerColor="bg-gradient-to-r from-orange-900/50 to-red-900/50"
       infoBox={infoBox}
       contextText="Infrastructure scolaire — CFAI Beauzelle (4 serveurs, 10+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Les incidents passaient inaperçus, aucune détection sécurité en place. Objectif : déployer un SIEM pour la collecte de logs et la détection des menaces."

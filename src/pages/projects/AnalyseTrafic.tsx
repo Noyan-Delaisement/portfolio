@@ -29,8 +29,8 @@ export default function AnalyseTrafic() {
       label="Analyse réseau & Sécurité"
       title="Analyse trafic réseau"
       period="2024/2025"
-      context="Infrastructure scolaire"
-      role="Étudiant BTS SIO SISR"
+      context="CFAI Beauzelle — infrastructure de formation"
+      role="Étudiant en BTS SIO SISR"
       headerColor="bg-gradient-to-r from-teal-900/50 to-green-900/50"
       infoBox={infoBox}
       contextText="Dans le cadre des travaux pratiques BTS SIO sur l'infrastructure scolaire, mise en place d'une solution complète d'analyse et de capture du trafic réseau. L'objectif était de comprendre les flux circulant sur le réseau, détecter des anomalies et constituer un historique de captures pour analyse forensique, sans impacter le trafic en production."
@@ -59,9 +59,7 @@ export default function AnalyseTrafic() {
         'Wireshark',
         'PCAP',
       ]}
-      documents={[
-        'Document technique',
-      ]}
+      documents={[]}
       prevProject={{ title: 'Sauvegarde NAS Synology', link: '/projets/nas-synology' }}
       nextProject={{ title: 'ntopng — Monitoring de trafic réseau', link: '/projets/ntopng' }}
     />

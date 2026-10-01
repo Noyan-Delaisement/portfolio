@@ -30,7 +30,7 @@ export default function NasSynology() {
       title="Sauvegarde NAS Synology"
       period="2024/2025"
       context="PREM Automation"
-      role="Technicien apprenti"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-cyan-900/50 to-blue-900/50"
       infoBox={infoBox}
       contextText="PREM Automation disposait de données critiques (bases MySQL, fichiers de configuration, documents) sans plan de sauvegarde formalisé ni stratégie de réplication. L'objectif était de mettre en place une solution de sauvegarde robuste et automatisée, garantissant la continuité de service en cas de défaillance matérielle, en s'appuyant sur l'infrastructure NAS Synology existante et les outils déjà déployés (Rudder)."

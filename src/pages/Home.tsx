@@ -8,7 +8,7 @@ export default function Home() {
       items: [
         'Systèmes (Windows Server, Linux Debian)',
         'Réseaux (VLAN, pfSense, DHCP, DNS)',
-        'Virtualisation (VirtualBox, VMware, Docker)',
+        'Virtualisation (Proxmox, VMware, Docker)',
         'Sécurité (pare-feu, IDS/IPS, SIEM)',
       ],
     },

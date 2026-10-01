@@ -29,8 +29,8 @@ export default function BookStack() {
       label="Documentation & Gestion des connaissances"
       title="BookStack — Wiki d'infrastructure"
       period="2026"
-      context="CFAI Beauzelle"
-      role="Étudiant apprenti"
+      context="CFAI Beauzelle — infrastructure de formation"
+      role="Étudiant en BTS SIO SISR"
       headerColor="bg-gradient-to-r from-indigo-900/50 to-blue-900/50"
       infoBox={infoBox}
       contextText="L'infrastructure c1-04.lan (CFAI Beauzelle) ne disposait d'aucune base de connaissances centralisée. Procédures, runbooks et documentations techniques étaient dispersés ou absents. Objectif : déployer une plateforme wiki accessible via navigateur, intégrée à l'Active Directory existant pour centraliser toute la documentation de l'infrastructure."

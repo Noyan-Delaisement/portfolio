@@ -106,7 +106,7 @@ export default function Veille() {
     },
     {
       period: 'Certifications visées',
-      title: 'CCNA, LPIC-1, AWS Solutions Architect Associate',
+      title: 'CCNA, LFCS, AWS Solutions Architect Associate',
     },
   ];
 

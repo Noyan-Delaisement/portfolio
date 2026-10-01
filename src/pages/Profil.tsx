@@ -57,9 +57,10 @@ export default function Profil() {
           <p className="text-gray-300 leading-relaxed text-lg">
             Je suis Noyan DELAISEMENT, étudiant en Bachelor Systèmes, Réseaux & Cloud Computing à
             l'ESGI Toulouse depuis septembre 2026 et titulaire du BTS SIO option SISR. Pendant mon
-            apprentissage chez PREM Automation à Toulouse, j'ai géré au quotidien une
-            infrastructure composée de <span className="text-[#4f8eff] font-medium">3 serveurs</span> et plus de{' '}
-            <span className="text-[#4f8eff] font-medium">20 services</span> (Active Directory, Docker, Vaultwarden,
+            apprentissage chez PREM Automation à Toulouse, au sein d'un service informatique de
+            deux personnes, j'ai participé à l'administration d'une infrastructure composée de{' '}
+            <span className="text-[#4f8eff] font-medium">2 serveurs</span> et plus de{' '}
+            <span className="text-[#4f8eff] font-medium">10 services</span> (Active Directory, Docker, Vaultwarden,
             Nextcloud, Zabbix, Wazuh, Rudder, GLPI). Passionné par les réseaux, la cybersécurité et
             l'administration système, je suis à la recherche d'une alternance pour la durée de mon
             Bachelor.

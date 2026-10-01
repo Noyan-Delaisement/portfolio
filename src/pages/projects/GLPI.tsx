@@ -42,7 +42,7 @@ export default function GLPI() {
       title="GLPI Ticketing N1/N2/N3"
       period="2024/2025"
       context="PREM Automation"
-      role="Technicien apprenti"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-yellow-900/50 to-orange-900/50"
       infoBox={infoBox}
       contextText="PREM Automation sans outil de gestion des demandes IT. Sollicitations par email sans traçabilité ni priorisation. Objectif : implémenter GLPI et structurer support IT en 3 niveaux."

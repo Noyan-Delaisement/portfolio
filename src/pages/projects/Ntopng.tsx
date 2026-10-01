@@ -30,7 +30,7 @@ export default function Ntopng() {
       title="ntopng — Monitoring de trafic réseau"
       period="2024/2025"
       context="PREM Automation"
-      role="Technicien apprenti"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-cyan-900/50 to-blue-900/50"
       infoBox={infoBox}
       contextText="Dans le cadre de mon apprentissage chez PREM Automation, déploiement de ntopng (Next Generation Network Top) pour assurer la visibilité et l'analyse du trafic réseau en temps réel. ntopng est positionné en écoute passive via un port SPAN configuré sur le switch, permettant une capture non intrusive de l'ensemble du trafic transitant sur le réseau sans impacter la production."

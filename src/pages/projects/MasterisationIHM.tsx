@@ -30,7 +30,7 @@ export default function MasterisationIHM() {
       title="Masterisation & Configuration IHM Windows"
       period="2024/2025"
       context="PREM Automation"
-      role="Technicien apprenti"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-orange-900/50 to-yellow-900/50"
       infoBox={infoBox}
       contextText="PREM Automation déploie des postes Windows sur des sites industriels pour piloter des automates via des interfaces IHM (Interface Homme-Machine). Chaque déploiement requiert une image système standardisée, une configuration réseau adaptée à l'environnement industriel (réseaux OT) et un paramétrage précis des logiciels IHM pour assurer la communication avec les automates sur site."

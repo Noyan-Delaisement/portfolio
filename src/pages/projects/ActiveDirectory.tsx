@@ -6,10 +6,10 @@ export default function ActiveDirectory() {
       label="Systèmes & Administration"
       title="Active Directory & GPO"
       period="2024/2025"
-      context="PREM Automation"
-      role="Technicien apprenti"
+      context="PREM Automation — client industriel"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-green-900/50 to-blue-900/50"
-      contextText="Absence d'annuaire centralisé chez PREM Automation. Objectif : déployer domaine Active Directory pour centraliser gestion utilisateurs et ressources."
+      contextText="Projet mené pour un client industriel de PREM Automation qui ne disposait d'aucun annuaire centralisé. Objectif : déployer un domaine Active Directory pour centraliser la gestion des utilisateurs et des ressources, et y intégrer les postes IHM."
       actions={[
         'Installation et configuration Windows Server en tant que contrôleur de domaine (DC)',
         'Création et organisation annuaire : Unités d\'Organisation (OU), groupes, comptes utilisateurs',
