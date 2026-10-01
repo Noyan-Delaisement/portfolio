@@ -33,9 +33,7 @@ export default function ActiveDirectory() {
         'ADUC',
         'Windows 10/11 Pro',
       ]}
-      documents={[
-        { title: 'Documentation technique — Déploiement Active Directory & Intégration des IHM', link: '/Doc_AD_PREM_Automation.pdf' },
-      ]}
+      documents={[]}
       prevProject={{ title: 'Infrastructure réseau sécurisée', link: '/projets/infrastructure' }}
       nextProject={{ title: 'Rudder — Gestion de configuration', link: '/projets/rudder' }}
     />

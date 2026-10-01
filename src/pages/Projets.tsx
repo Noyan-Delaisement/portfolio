@@ -5,9 +5,9 @@ export default function Projets() {
   const projects = [
     {
       emoji: '🏭',
-      title: 'Réseau Industriel Sécurisé — Orano TN',
+      title: 'Réseau industriel sécurisé — site client sensible',
       description: 'pfSense 2.7 CE, 4 VLANs industriels, air gap, filtrage strict default deny, 16 IHM, automates',
-      period: 'PREM Automation 2023/2024',
+      period: 'PREM Automation 2024/2025',
       link: '/projets/infrastructure',
     },
     {

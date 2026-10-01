@@ -3,7 +3,7 @@ import ProjectLayout from '../../components/ProjectLayout';
 export default function Infrastructure() {
   const infoBox = (
     <div className="bg-[#161b22] border border-blue-500/50 rounded-lg p-6">
-      <h3 className="text-lg font-semibold text-blue-400 mb-3">Architecture réseau usine — Orano TN</h3>
+      <h3 className="text-lg font-semibold text-blue-400 mb-3">Architecture réseau usine — site client</h3>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
         <div>
           <p className="text-gray-400">VLANs déployés</p>
@@ -23,7 +23,7 @@ export default function Infrastructure() {
         <div>
           <p className="text-gray-400">Isolation</p>
           <p className="text-2xl font-bold text-[#00d4a0]">Air gap</p>
-          <p className="text-gray-400 text-xs">réseau admin Orano TN</p>
+          <p className="text-gray-400 text-xs">réseau administratif du client</p>
         </div>
       </div>
     </div>
@@ -33,14 +33,14 @@ export default function Infrastructure() {
     <ProjectLayout
       label="Infrastructure réseau industrielle"
       title="Réseau Industriel Sécurisé — Périmètre Usine"
-      period="2023/2024"
-      context="PREM Automation — Site Orano TN"
-      role="Technicien apprenti"
+      period="2024/2025"
+      context="PREM Automation — client industriel (site sensible)"
+      role="Technicien informatique apprenti"
       headerColor="bg-gradient-to-r from-blue-900/50 to-purple-900/50"
       infoBox={infoBox}
-      contextText="Dans le cadre d'un contrat de prestation pour Orano TN (transport et logistique de matières nucléaires), PREM Automation est intervenu sur site pour concevoir et déployer l'infrastructure réseau du périmètre usine. Le site impose une séparation physique et logique totale (air gap) entre le réseau administratif Orano TN et le réseau usine PREM Automation, afin de protéger les systèmes de contrôle industriel (SCI) de toute contamination ou accès non autorisé."
+      contextText="Dans le cadre d'un contrat de prestation pour un client industriel dont le site est classé sensible, PREM Automation est intervenu pour concevoir et déployer l'infrastructure réseau du périmètre usine. Le site impose une séparation physique et logique totale (air gap) entre le réseau administratif du client et le réseau usine, afin de protéger les systèmes de contrôle industriel (SCI) de toute contamination ou accès non autorisé."
       actions={[
-        'Conception du plan d\'adressage IP en 4 VLANs fonctionnels : SUPERVISION (10.10.10/24), PRODUCTION (10.10.20/24), MAINTENANCE (10.10.30/24), MANAGEMENT (10.10.99/24)',
+        'Conception du plan d\'adressage IP en 4 VLANs fonctionnels : Supervision, Production, Maintenance et Management',
         'Déploiement pfSense 2.7 CE en routeur/pare-feu interne sans interface WAN — routage inter-VLAN via trunk 802.1Q',
         'Configuration du switch manageable 802.1Q avec ports trunk et ports d\'accès par VLAN',
         'Mise en place de 9 règles de filtrage pfSense avec politique de refus implicite (default deny)',
@@ -51,7 +51,7 @@ export default function Infrastructure() {
         'Rédaction de la documentation technique et des procédures de maintenance courante',
       ]}
       results={[
-        'Air gap opérationnel — aucune interconnexion entre réseau usine et réseau administratif Orano TN',
+        'Air gap opérationnel — aucune interconnexion entre réseau usine et réseau administratif du client',
         'Segmentation en 4 VLANs adaptés aux contraintes industrielles du site',
         'Politique de filtrage stricte : 7 règles explicites + refus implicite — 9/9 tests validés',
         'Communication IHM ↔ automates fluide sans interruption sur le VLAN Production',
@@ -69,9 +69,7 @@ export default function Infrastructure() {
         'Windows Server',
         'Windows Embedded / 10',
       ]}
-      documents={[
-        { title: 'Documentation technique — Réseau Industriel Sécurisé (Orano TN)', link: '/Reseau_Usine_OtanoTN_PREM.pdf' },
-      ]}
+      documents={[]}
       nextProject={{ title: 'Active Directory & GPO', link: '/projets/active-directory' }}
     />
   );
