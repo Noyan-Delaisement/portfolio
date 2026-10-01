@@ -2,12 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FolderOpen, ArrowRight } from 'lucide-react';
 import { projects, type ProjectCategory } from '../data/projects';
+import usePageTitle from '../hooks/usePageTitle';
 
 type Filter = 'Tous' | ProjectCategory;
 
 const filters: Filter[] = ['Tous', 'Entreprise', 'Formation', 'Personnel'];
 
 export default function Projets() {
+  usePageTitle('Projets');
+
   const [filter, setFilter] = useState<Filter>('Tous');
 
   const visibleProjects =

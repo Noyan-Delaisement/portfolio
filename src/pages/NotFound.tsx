@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function NotFound() {
+  usePageTitle('Page introuvable');
+
   return (
     <div className="py-24 px-4 flex flex-col items-center justify-center text-center space-y-6">
       <p className="text-8xl font-bold text-[#4f8eff]">404</p>

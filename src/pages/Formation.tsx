@@ -1,6 +1,9 @@
 import { Briefcase, GraduationCap } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Formation() {
+  usePageTitle('Formation & Expériences');
+
   const experience = {
     company: 'PREM Automation',
     role: 'Technicien informatique apprenti',

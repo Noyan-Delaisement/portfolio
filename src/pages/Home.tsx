@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
 import AlternanceCard from '../components/AlternanceCard';
 import { projects } from '../data/projects';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Home() {
+  usePageTitle();
+
   const skillCards: { title: string; items: string[]; link?: { to: string; label: string } }[] = [
     {
       title: 'Compétences techniques',

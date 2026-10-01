@@ -1,8 +1,11 @@
 import { Mail, MapPin, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 import AlternanceCard from '../components/AlternanceCard';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Contact() {
+  usePageTitle('Contact');
+
   const [state, handleSubmit] = useForm('mwvzjpvj');
 
   const contactInfo = [

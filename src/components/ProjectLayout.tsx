@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react';
 import { projects } from '../data/projects';
+import usePageTitle from '../hooks/usePageTitle';
 
 interface ProjectLayoutProps {
   label: string;
@@ -31,6 +32,8 @@ export default function ProjectLayout({
   headerColor,
   infoBox,
 }: ProjectLayoutProps) {
+  usePageTitle(title);
+
   const { pathname } = useLocation();
   const currentIndex = projects.findIndex(
     (project) => `/projets/${project.slug}` === pathname.replace(/\/$/, '')
@@ -134,11 +137,33 @@ export default function ProjectLayout({
                     )}
                   </div>
                   {typeof doc === 'object' && doc.link && doc.link.endsWith('.pdf') && (
-                    <iframe
-                      src={doc.link}
-                      className="w-full h-[750px] rounded border border-gray-700"
-                      title={doc.title}
-                    />
+                    <>
+                      <div className="flex flex-wrap gap-3 mb-4">
+                        <a
+                          href={doc.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#4f8eff] hover:bg-[#6ea8ff] text-white font-medium rounded-lg transition-colors text-sm"
+                        >
+                          <ExternalLink size={16} />
+                          Ouvrir le PDF
+                        </a>
+                        <a
+                          href={doc.link}
+                          download
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-600 hover:border-[#4f8eff] text-gray-300 hover:text-white font-medium rounded-lg transition-colors text-sm"
+                        >
+                          <Download size={16} />
+                          Télécharger
+                        </a>
+                      </div>
+                      <iframe
+                        src={doc.link}
+                        loading="lazy"
+                        className="hidden md:block w-full h-[750px] rounded border border-gray-700"
+                        title={doc.title}
+                      />
+                    </>
                   )}
                 </div>
               ))}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Rss, Shield, Bug, Newspaper, Github, Youtube, Linkedin, Globe, Activity, Eye, Settings } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 type RssItem = { title: string; link: string; pubDate: string; description: string } | null;
 
@@ -10,6 +11,8 @@ const rssFeeds = [
 ];
 
 export default function Veille() {
+  usePageTitle('Veille');
+
   const sources = [
     {
       icon: Shield,

@@ -1,6 +1,9 @@
 import { Anchor, Award, Shield, Radio, BookOpen, ArrowRight } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Engagement() {
+  usePageTitle('Engagement');
+
   const certifications = [
     { code: 'BNSSA', label: 'Brevet National de Sécurité et de Sauvetage Aquatique' },
     { code: 'PSE1', label: 'Premiers Secours en Équipe niveau 1' },

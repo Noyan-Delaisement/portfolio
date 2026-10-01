@@ -1,6 +1,9 @@
 import { User, Zap, Target, Lightbulb, Users, TrendingUp, Download } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Profil() {
+  usePageTitle('Profil');
+
   const technicalSkills = [
     { category: 'Systèmes', skills: 'Windows Server 2019/2022, Active Directory, GPO, Debian Linux, Rocky Linux, Sysprep / WinPE, MDT / WDS' },
     { category: 'Réseaux', skills: 'VLAN 802.1Q, pfSense, Fortinet, Cisco, routage, DHCP, DNS, VPN, IDS/IPS Suricata, OPC-UA / Modbus, réseau OT/IT' },

@@ -16,7 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
 
   return (
     <div className="min-h-screen bg-[#0d1117] text-gray-100 flex flex-col">
@@ -32,6 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={link.path}
                   to={link.path}
+                  aria-current={isActive(link.path) ? 'page' : undefined}
                   className={`text-sm transition-colors ${
                     isActive(link.path)
                       ? 'text-[#4f8eff] font-medium'
@@ -67,6 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden text-gray-300 hover:text-white"
               aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -74,13 +78,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#0d1117] border-t border-gray-800">
+          <div id="mobile-menu" className="lg:hidden bg-[#0d1117] border-t border-gray-800">
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-current={isActive(link.path) ? 'page' : undefined}
                   className={`block py-2 text-sm transition-colors ${
                     isActive(link.path)
                       ? 'text-[#4f8eff] font-medium'
@@ -96,6 +101,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#4f8eff] transition-colors"
+                  aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
                 </a>
@@ -104,6 +110,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#4f8eff] transition-colors"
+                  aria-label="GitHub"
                 >
                   <Github size={20} />
                 </a>
