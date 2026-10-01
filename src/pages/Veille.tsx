@@ -94,25 +94,6 @@ export default function Veille() {
     },
   ];
 
-  const timeline = [
-    {
-      period: '2024–2026',
-      title: 'BTS SIO SISR en apprentissage chez PREM Automation, Toulouse — diplôme obtenu',
-    },
-    {
-      period: 'Depuis septembre 2026',
-      title: 'Bachelor Systèmes, Réseaux & Cloud Computing — ESGI Toulouse — à la recherche d\'une alternance',
-    },
-    {
-      period: 'Objectif',
-      title: 'Administrateur systèmes & réseaux / Cloud / Cybersécurité',
-    },
-    {
-      period: 'Certifications visées',
-      title: 'CCNA, LFCS, AWS Solutions Architect Associate',
-    },
-  ];
-
   const [feedItems, setFeedItems] = useState<Record<string, RssItem>>({});
   const [loadingRss, setLoadingRss] = useState(true);
 
@@ -280,21 +261,6 @@ export default function Veille() {
                 </a>
               );
             })}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold text-white mb-6">Mon projet professionnel</h2>
-          <div className="relative pl-8 border-l-2 border-[#00d4a0] space-y-6">
-            {timeline.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-[#00d4a0] border-4 border-[#0d1117]"></div>
-                <div className="bg-[#161b22] border border-gray-800 rounded-lg p-5 hover:border-[#00d4a0]/50 transition-colors">
-                  <span className="text-sm text-[#00d4a0] font-medium">{item.period}</span>
-                  <p className="text-white mt-1">{item.title}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
       </div>
