@@ -31,7 +31,6 @@ export default function Ntopng() {
       period="2024/2025"
       context="PREM Automation"
       role="Technicien apprenti"
-      competencies={['C1', 'C2', 'C5']}
       headerColor="bg-gradient-to-r from-cyan-900/50 to-blue-900/50"
       infoBox={infoBox}
       contextText="Dans le cadre de mon apprentissage chez PREM Automation, déploiement de ntopng (Next Generation Network Top) pour assurer la visibilité et l'analyse du trafic réseau en temps réel. ntopng est positionné en écoute passive via un port SPAN configuré sur le switch, permettant une capture non intrusive de l'ensemble du trafic transitant sur le réseau sans impacter la production."
@@ -61,31 +60,6 @@ export default function Ntopng() {
         'Nginx (reverse proxy)',
         'Zabbix',
         'Wazuh',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Recenser et identifier les ressources numériques du réseau (flux, hôtes, protocoles)',
-            'Exploiter des référentiels, normes et standards (port mirroring SPAN, DPI)',
-            'Vérifier le respect des règles d\'utilisation du réseau via les alertes ntopng',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Identifier et diagnostiquer les anomalies réseau via l\'analyse des flux',
-            'Traiter des demandes concernant les services réseau à partir des données de monitoring',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service informatique (sonde de monitoring réseau)',
-            'Vérifier la qualité du service dans les conditions normales d\'utilisation',
-            'Intégrer ntopng dans l\'environnement de supervision existant',
-          ],
-        },
       ]}
       documents={[
         { title: 'Documentation technique — Déploiement ntopng', link: '/ntopng.pdf' },

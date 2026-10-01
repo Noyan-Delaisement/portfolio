@@ -29,7 +29,6 @@ export default function Rudder() {
       period="2024/2025"
       context="PREM Automation"
       role="Technicien apprenti"
-      competencies={['C1', 'C2']}
       headerColor="bg-gradient-to-r from-purple-900/50 to-pink-900/50"
       infoBox={infoBox}
       contextText="Infrastructure PREM Automation gérée manuellement, configurations incohérentes entre machines, mises à jour sécurité non systématiques. Objectif : déployer Rudder pour standardiser et automatiser gestion de configuration."
@@ -55,23 +54,6 @@ export default function Rudder() {
         'Bash Shell',
         'CFEngine',
         'Docker',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Exploiter des référentiels, normes et standards',
-            'Vérifier les conditions de continuité de service',
-            'Vérifier le respect des règles d\'utilisation',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Collecter, suivre et orienter des demandes',
-            'Traiter des demandes concernant les services réseau et système',
-          ],
-        },
       ]}
       documents={[
         { title: 'Documentation Rudder', link: '/rudder.pdf' },

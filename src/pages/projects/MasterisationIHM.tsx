@@ -31,7 +31,6 @@ export default function MasterisationIHM() {
       period="2024/2025"
       context="PREM Automation"
       role="Technicien apprenti"
-      competencies={['C1', 'C2', 'C4', 'C5']}
       headerColor="bg-gradient-to-r from-orange-900/50 to-yellow-900/50"
       infoBox={infoBox}
       contextText="PREM Automation déploie des postes Windows sur des sites industriels pour piloter des automates via des interfaces IHM (Interface Homme-Machine). Chaque déploiement requiert une image système standardisée, une configuration réseau adaptée à l'environnement industriel (réseaux OT) et un paramétrage précis des logiciels IHM pour assurer la communication avec les automates sur site."
@@ -60,38 +59,6 @@ export default function MasterisationIHM() {
         'Active Directory',
         'Cisco Switch',
         'VLANs',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Recenser et identifier les ressources numériques',
-            'Exploiter des référentiels, normes et standards (image master, procédures)',
-            'Vérifier les conditions de continuité de service',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Traiter des demandes concernant les services réseau et système',
-            'Résoudre les incidents de mise en service sur site client',
-          ],
-        },
-        {
-          code: 'C4',
-          details: [
-            'Analyser les objectifs et les modalités d\'organisation d\'un projet',
-            'Planifier les activités de déploiement et anticiper les contraintes site',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service informatique',
-            'Accompagner les utilisateurs dans la mise en place d\'un service',
-            'Vérifier la qualité du service dans les conditions normales d\'utilisation',
-          ],
-        },
       ]}
 
       documents={[

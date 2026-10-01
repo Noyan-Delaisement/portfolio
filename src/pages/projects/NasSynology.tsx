@@ -31,7 +31,6 @@ export default function NasSynology() {
       period="2024/2025"
       context="PREM Automation"
       role="Technicien apprenti"
-      competencies={['C1', 'C2', 'C4', 'C5']}
       headerColor="bg-gradient-to-r from-cyan-900/50 to-blue-900/50"
       infoBox={infoBox}
       contextText="PREM Automation disposait de données critiques (bases MySQL, fichiers de configuration, documents) sans plan de sauvegarde formalisé ni stratégie de réplication. L'objectif était de mettre en place une solution de sauvegarde robuste et automatisée, garantissant la continuité de service en cas de défaillance matérielle, en s'appuyant sur l'infrastructure NAS Synology existante et les outils déjà déployés (Rudder)."
@@ -61,37 +60,6 @@ export default function NasSynology() {
         'Bash Shell',
         'Cron',
         'Debian Linux',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Exploiter des référentiels, normes et standards (stratégie 3-2-1)',
-            'Vérifier les conditions de continuité de service informatique',
-            'Gérer les sauvegardes et plans de reprise d\'activité',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Traiter des demandes concernant les services réseau et système',
-            'Mettre en œuvre et vérifier les niveaux d\'habilitation associés à un service',
-          ],
-        },
-        {
-          code: 'C4',
-          details: [
-            'Analyser les objectifs et les modalités d\'organisation d\'un projet',
-            'Planifier les activités et évaluer les écarts par rapport à la prévision',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service informatique',
-            'Accompagner les utilisateurs dans la mise en place d\'un service',
-          ],
-        },
       ]}
       documents={[]}
       prevProject={{ title: 'GLPI Ticketing N1/N2/N3', link: '/projets/glpi' }}

@@ -76,11 +76,11 @@ export default function Engagement() {
         <div className="space-y-4">
           <h1 className="text-4xl font-bold text-white flex items-center gap-3">
             <Anchor className="text-[#4f8eff]" size={36} />
-            Engagement Étudiant
+            Engagement bénévole
           </h1>
           <div className="h-1 w-24 bg-[#4f8eff] rounded"></div>
           <p className="text-gray-300 text-lg max-w-3xl leading-relaxed">
-            En parallèle de mes études, du BTS SIO SISR au Bachelor à l'ESGI Toulouse,
+            En parallèle de mes études à l'ESGI Toulouse,
             je suis bénévole nageur sauveteur à la <strong className="text-white">SNSM Toulouse</strong> depuis
             plus de 4 ans.
           </p>
@@ -159,7 +159,7 @@ export default function Engagement() {
         {/* Tableau SNSM ↔ SISR */}
         <section className="bg-gradient-to-r from-[#4f8eff]/10 to-transparent border border-[#4f8eff]/30 rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-white mb-2">
-            Compétences transversales — SNSM & SISR
+            Compétences transversales — SNSM & informatique
           </h2>
           <p className="text-gray-400 text-sm mb-6">
             L'engagement à la SNSM développe des réflexes directement transposables en informatique.
@@ -172,7 +172,7 @@ export default function Engagement() {
                     Compétence SNSM
                   </th>
                   <th className="text-left pb-3 text-[#00d4a0] font-semibold w-1/2">
-                    Compétence SISR
+                    Compétence systèmes & réseaux
                   </th>
                 </tr>
               </thead>
@@ -186,23 +186,6 @@ export default function Engagement() {
               </tbody>
             </table>
           </div>
-        </section>
-
-        {/* Document EF4 */}
-        <section className="bg-[#161b22] border border-gray-800 rounded-lg p-6">
-          <h2 className="text-2xl font-semibold text-white mb-2">Document EF4</h2>
-          <p className="text-gray-400 text-sm mb-5">
-            Présentation réalisée dans le cadre de l'épreuve EF4 — Engagement étudiant du BTS SIO.
-          </p>
-          <a
-            href="https://docs.google.com/presentation/d/1ZZeeg-adjoxmJ9ACnAXrXWnl5jl_zLS8UZbrRTEJiTU/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#4f8eff] hover:text-[#6ea8ff] transition-colors hover:underline"
-          >
-            Voir la présentation EF4 sur Google Slides
-            <ArrowRight size={16} />
-          </a>
         </section>
 
       </div>

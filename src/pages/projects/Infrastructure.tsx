@@ -36,7 +36,6 @@ export default function Infrastructure() {
       period="2023/2024"
       context="PREM Automation — Site Orano TN"
       role="Technicien apprenti"
-      competencies={['C1', 'C5']}
       headerColor="bg-gradient-to-r from-blue-900/50 to-purple-900/50"
       infoBox={infoBox}
       contextText="Dans le cadre d'un contrat de prestation pour Orano TN (transport et logistique de matières nucléaires), PREM Automation est intervenu sur site pour concevoir et déployer l'infrastructure réseau du périmètre usine. Le site impose une séparation physique et logique totale (air gap) entre le réseau administratif Orano TN et le réseau usine PREM Automation, afin de protéger les systèmes de contrôle industriel (SCI) de toute contamination ou accès non autorisé."
@@ -69,24 +68,6 @@ export default function Infrastructure() {
         'OPC-UA / Modbus',
         'Windows Server',
         'Windows Embedded / 10',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Recenser et identifier les ressources numériques du réseau industriel (IHM, automates, serveurs)',
-            'Exploiter des référentiels, normes et standards (IEEE 802.1Q, segmentation OT/IT, politique de filtrage)',
-            'Vérifier les conditions de continuité de service en environnement de production industrielle',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer une infrastructure réseau complète (pfSense, switch 802.1Q, plan d\'adressage, VLANs)',
-            'Réaliser les tests d\'intégration et d\'acceptation (9 tests validés, flux autorisés et bloqués)',
-            'Documenter l\'architecture pour la maintenance et les futures interventions',
-          ],
-        },
       ]}
       documents={[
         { title: 'Documentation technique — Réseau Industriel Sécurisé (Orano TN)', link: '/Reseau_Usine_OtanoTN_PREM.pdf' },

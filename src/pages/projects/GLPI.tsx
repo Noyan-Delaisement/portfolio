@@ -43,7 +43,6 @@ export default function GLPI() {
       period="2024/2025"
       context="PREM Automation"
       role="Technicien apprenti"
-      competencies={['C2', 'C4', 'C5']}
       headerColor="bg-gradient-to-r from-yellow-900/50 to-orange-900/50"
       infoBox={infoBox}
       contextText="PREM Automation sans outil de gestion des demandes IT. Sollicitations par email sans traçabilité ni priorisation. Objectif : implémenter GLPI et structurer support IT en 3 niveaux."
@@ -70,30 +69,6 @@ export default function GLPI() {
         'PHP',
         'ITIL principes',
         'FusionInventory',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C2',
-          details: [
-            'Collecter, suivre et orienter des demandes',
-            'Traiter des demandes services réseau et applicatifs',
-          ],
-        },
-        {
-          code: 'C4',
-          details: [
-            'Analyser les objectifs et modalités d\'organisation',
-            'Planifier les activités',
-            'Évaluer les indicateurs de suivi',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service',
-            'Accompagner les utilisateurs dans la mise en place',
-          ],
-        },
       ]}
       documents={[]}
       prevProject={{ title: 'Supervision Wazuh', link: '/projets/supervision' }}

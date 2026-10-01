@@ -16,7 +16,6 @@ import AnalyseTrafic from './pages/projects/AnalyseTrafic';
 import BookStack from './pages/projects/BookStack';
 import Ntopng from './pages/projects/Ntopng';
 import Veille from './pages/Veille';
-import TableauSynthese from './pages/TableauSynthese';
 import Contact from './pages/Contact';
 import Engagement from './pages/Engagement';
 import NotFound from './pages/NotFound';
@@ -42,7 +41,6 @@ function App() {
           <Route path="/projets/ntopng" element={<Ntopng />} />
           <Route path="/projets/portfolio" element={<Portfolio />} />
           <Route path="/veille" element={<Veille />} />
-          <Route path="/tableau-synthese" element={<TableauSynthese />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/engagement" element={<Engagement />} />
           <Route path="*" element={<NotFound />} />

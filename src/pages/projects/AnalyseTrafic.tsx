@@ -31,7 +31,6 @@ export default function AnalyseTrafic() {
       period="2024/2025"
       context="Infrastructure scolaire"
       role="Étudiant BTS SIO SISR"
-      competencies={['C1', 'C2', 'C5']}
       headerColor="bg-gradient-to-r from-teal-900/50 to-green-900/50"
       infoBox={infoBox}
       contextText="Dans le cadre des travaux pratiques BTS SIO sur l'infrastructure scolaire, mise en place d'une solution complète d'analyse et de capture du trafic réseau. L'objectif était de comprendre les flux circulant sur le réseau, détecter des anomalies et constituer un historique de captures pour analyse forensique, sans impacter le trafic en production."
@@ -59,31 +58,6 @@ export default function AnalyseTrafic() {
         'Debian Linux',
         'Wireshark',
         'PCAP',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Recenser et identifier les ressources numériques du réseau',
-            'Exploiter des référentiels, normes et standards (IEEE 802.1Q, SPAN)',
-            'Vérifier le respect des règles d\'utilisation du réseau',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Collecter, suivre et orienter des demandes',
-            'Traiter des demandes concernant les services réseau',
-            'Identifier et diagnostiquer les anomalies réseau',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service informatique (sonde réseau)',
-            'Vérifier la qualité du service dans les conditions normales d\'utilisation',
-          ],
-        },
       ]}
       documents={[
         'Document technique',

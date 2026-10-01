@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
-import CompetencyBadge from './CompetencyBadge';
 
 interface ProjectLayoutProps {
   label: string;
@@ -8,12 +7,10 @@ interface ProjectLayoutProps {
   period: string;
   context: string;
   role: string;
-  competencies: string[];
   contextText: string;
   actions: string[];
   results: string[];
   techStack: string[];
-  competencyDetails: { code: string; details: string[] }[];
   documents: (string | { title: string; link: string })[];
   prevProject?: { title: string; link: string };
   nextProject?: { title: string; link: string };
@@ -27,12 +24,10 @@ export default function ProjectLayout({
   period,
   context,
   role,
-  competencies,
   contextText,
   actions,
   results,
   techStack,
-  competencyDetails,
   documents,
   prevProject,
   nextProject,
@@ -53,9 +48,6 @@ export default function ProjectLayout({
         <div className={`${headerColor} rounded-lg p-8 space-y-4`}>
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-sm font-medium text-white/80">{label}</span>
-            {competencies.map((comp) => (
-              <CompetencyBadge key={comp} code={comp} />
-            ))}
           </div>
           <h1 className="text-4xl font-bold text-white">{title}</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
@@ -116,29 +108,6 @@ export default function ProjectLayout({
               >
                 {tech}
               </span>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-gradient-to-r from-[#4f8eff]/10 to-transparent border border-[#4f8eff]/30 rounded-lg p-6">
-          <h2 className="text-2xl font-semibold text-white mb-4">
-            Compétences E5 mobilisées — détail
-          </h2>
-          <div className="space-y-4">
-            {competencyDetails.map((comp, index) => (
-              <div key={index}>
-                <div className="flex items-center gap-2 mb-2">
-                  <CompetencyBadge code={comp.code} />
-                </div>
-                <ul className="space-y-1 ml-4">
-                  {comp.details.map((detail, idx) => (
-                    <li key={idx} className="text-sm text-gray-300 flex items-start">
-                      <span className="text-[#4f8eff] mr-2">·</span>
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             ))}
           </div>
         </section>

@@ -8,7 +8,6 @@ export default function ActiveDirectory() {
       period="2024/2025"
       context="PREM Automation"
       role="Technicien apprenti"
-      competencies={['C1', 'C5']}
       headerColor="bg-gradient-to-r from-green-900/50 to-blue-900/50"
       contextText="Absence d'annuaire centralisé chez PREM Automation. Objectif : déployer domaine Active Directory pour centraliser gestion utilisateurs et ressources."
       actions={[
@@ -33,24 +32,6 @@ export default function ActiveDirectory() {
         'PowerShell',
         'ADUC',
         'Windows 10/11 Pro',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Mettre en place et vérifier les niveaux d\'habilitation',
-            'Recenser et identifier les ressources numériques',
-            'Vérifier les conditions de continuité de service',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service',
-            'Accompagner les utilisateurs',
-            'Réaliser les tests d\'intégration',
-          ],
-        },
       ]}
       documents={[
         { title: 'Documentation technique — Déploiement Active Directory & Intégration des IHM', link: '/Doc_AD_PREM_Automation.pdf' },

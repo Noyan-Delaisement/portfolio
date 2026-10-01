@@ -29,7 +29,6 @@ export default function Supervision() {
       period="2024/2025"
       context="CFAI Beauzelle"
       role="Étudiant apprenti"
-      competencies={['C1', 'C2', 'C5']}
       headerColor="bg-gradient-to-r from-orange-900/50 to-red-900/50"
       infoBox={infoBox}
       contextText="Infrastructure scolaire — CFAI Beauzelle (4 serveurs, 10+ services : AD, Docker, Vaultwarden, Nextcloud) sans supervision centralisée. Les incidents passaient inaperçus, aucune détection sécurité en place. Objectif : déployer un SIEM pour la collecte de logs et la détection des menaces."
@@ -50,30 +49,6 @@ export default function Supervision() {
         'Windows Server',
         'Bash',
         'yaml',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Exploiter des référentiels et normes',
-            'Gérer des sauvegardes',
-            'Vérifier les conditions de continuité de service',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Collecter, suivre et orienter des demandes',
-            'Traiter des demandes concernant les services réseau et système',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer un service',
-            'Réaliser les tests d\'intégration et d\'acceptation',
-          ],
-        },
       ]}
       documents={[
         { title: 'Documentation Wazuh SIEM', link: '/wazuh.pdf' },

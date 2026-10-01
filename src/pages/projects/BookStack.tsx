@@ -31,7 +31,6 @@ export default function BookStack() {
       period="2026"
       context="CFAI Beauzelle"
       role="Étudiant apprenti"
-      competencies={['C1', 'C2', 'C5']}
       headerColor="bg-gradient-to-r from-indigo-900/50 to-blue-900/50"
       infoBox={infoBox}
       contextText="L'infrastructure c1-04.lan (CFAI Beauzelle) ne disposait d'aucune base de connaissances centralisée. Procédures, runbooks et documentations techniques étaient dispersés ou absents. Objectif : déployer une plateforme wiki accessible via navigateur, intégrée à l'Active Directory existant pour centraliser toute la documentation de l'infrastructure."
@@ -62,31 +61,6 @@ export default function BookStack() {
         'PHP / Laravel',
         'Debian 12',
         'Proxmox VE',
-      ]}
-      competencyDetails={[
-        {
-          code: 'C1',
-          details: [
-            'Gérer la persistance des données applicatives via volumes Docker nommés',
-            'Appliquer le principe du moindre privilège (compte LdapService en lecture seule)',
-            'Mettre en place les sauvegardes et vérifier la continuité de service',
-          ],
-        },
-        {
-          code: 'C2',
-          details: [
-            'Diagnostiquer et résoudre les incidents de déploiement (CSRF, LDAP, race condition DB)',
-            'Identifier les causes racines et appliquer des solutions documentées',
-          ],
-        },
-        {
-          code: 'C5',
-          details: [
-            'Déployer et configurer un service web conteneurisé',
-            'Intégrer le service dans l\'infrastructure existante (Active Directory, reverse proxy)',
-            'Réaliser les tests d\'intégration et valider la mise en service',
-          ],
-        },
       ]}
       documents={[
         { title: 'Documentation technique BookStack sur Docker Compose', link: '/documentation-bookstack-compose.pdf' },
